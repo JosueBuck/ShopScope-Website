@@ -1,0 +1,1 @@
+# ShopScope-Website
