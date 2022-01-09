@@ -1,0 +1,251 @@
+/* Media Query Breakpoint Variables */
+/* Mixings (Breakpoints) */
+/* Basic Styling */
+* {
+  color: #666666;
+}
+
+/* p {
+    color: $grey;
+} */
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Login Page */
+.loginPage {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #F7F9FC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginPage .wrapperLogin {
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (min-width: 481px) {
+  .loginPage .wrapperLogin {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .loginPage .wrapperLogin {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .loginPage .wrapperLogin {
+    width: 40%;
+  }
+}
+
+.loginPage .wrapperLogin .logoImg {
+  display: none;
+  width: 40%;
+}
+
+@media screen and (min-width: 481px) {
+  .loginPage .wrapperLogin .logoImg {
+    display: inline-block;
+    padding-bottom: 2em;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .loginPage .wrapperLogin .logoImg {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .loginPage .wrapperLogin .logoImg {
+    display: inline-block;
+  }
+}
+
+.loginPage .wrapperLogin .loginText {
+  font-size: 2em;
+  margin-top: .5em;
+}
+
+@media screen and (min-width: 481px) {
+  .loginPage .wrapperLogin .loginText {
+    font-size: 3em;
+  }
+}
+
+/* Login Form Container */
+.loginFormContainer {
+  position: relative;
+}
+
+/* Input Component */
+.inputContainer {
+  width: 80%;
+  margin: 2em auto;
+  border-bottom: rgba(102, 102, 102, 0.3) 1px solid;
+}
+
+.inputContainer input {
+  width: 80%;
+  height: 2em;
+  background-color: #F7F9FC;
+  text-align: center;
+  border: none;
+  position: relative;
+  line-height: 2em;
+  font-size: 1em;
+}
+
+.inputContainer input:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 481px) {
+  .inputContainer input {
+    line-height: 3em;
+    height: 3em;
+    font-size: 1.5em;
+  }
+}
+
+.inputContainer input::-webkit-input-placeholder {
+  opacity: .5;
+}
+
+.inputContainer input:-ms-input-placeholder {
+  opacity: .5;
+}
+
+.inputContainer input::-ms-input-placeholder {
+  opacity: .5;
+}
+
+.inputContainer input::placeholder {
+  opacity: .5;
+}
+
+.inputContainer .icon {
+  width: 15px;
+  color: #666666;
+  position: absolute;
+  margin-top: .5em;
+}
+
+@media screen and (min-width: 481px) {
+  .inputContainer .icon {
+    height: 1.5em;
+    width: 1.5em;
+    margin-top: 1.5em;
+  }
+}
+
+/* Submit Button */
+.submitButtonContainer {
+  width: 30%;
+  height: 2.8em;
+  margin: 2em auto;
+  line-height: 2.5em;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+          box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+}
+
+@media screen and (min-width: 481px) {
+  .submitButtonContainer {
+    margin: 2.5em auto;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .submitButtonContainer {
+    width: 20%;
+  }
+}
+
+.submitButtonContainer .icon {
+  margin-top: .6em;
+  height: 1.5em;
+  width: 1.5em;
+  color: #666666;
+}
+
+/* Info Component */
+.infoContainer {
+  width: 80%;
+  margin: 0 auto;
+  padding: .5em;
+  position: relative;
+  border: 1px #666666 solid;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 1025px) {
+  .infoContainer {
+    width: 50%;
+    position: absolute;
+    z-index: 999;
+    top: -48vh;
+    right: -28vw;
+    border: none;
+    background-color: rgba(250, 102, 102, 0.3);
+    -webkit-box-shadow: 0 0.2em 0.9em rgba(102, 102, 102, 0.5);
+            box-shadow: 0 0.2em 0.9em rgba(102, 102, 102, 0.5);
+  }
+}
+
+.infoContainer ol {
+  line-height: 2em;
+}
+
+@media screen and (min-width: 481px) {
+  .infoContainer ol {
+    margin: 1em auto;
+    width: 70%;
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .infoContainer ol {
+    font-size: 1em;
+  }
+}
+
+.infoContainer .infoCloseIcon {
+  position: absolute;
+  left: 79vw;
+  top: .5vh;
+}
+
+@media screen and (min-width: 481px) {
+  .infoContainer .infoCloseIcon {
+    font-size: 1.4em;
+    left: 61.5vw;
+    top: 1vh;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .infoContainer .infoCloseIcon {
+    font-size: 1.2em;
+    left: 19.2vw;
+    top: 1vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */

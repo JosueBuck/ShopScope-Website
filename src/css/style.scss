@@ -1,0 +1,254 @@
+$grey: #666666;
+$backgroundColor: #F7F9FC;
+$iconSize: 15px;
+
+/* Media Query Breakpoint Variables */
+$breakpoint-tablet: 481px;
+$breakpoint-tablet-portait: 769px;
+$breakpoint-desktop: 1025px;
+
+/* Mixings (Breakpoints) */
+@mixin tablet {
+    @media screen and (min-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin tablet-portait {
+    @media screen and (min-width: $breakpoint-tablet-portait) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+
+/* Basic Styling */
+
+* {
+    color: $grey;
+}
+
+/* p {
+    color: $grey;
+} */
+
+a {
+    text-decoration: none;
+    //color: $grey;
+    font-weight: bold;
+  }
+
+
+
+
+////////* LOGIN *////////
+
+/* Login Page */
+
+.loginPage {
+    width: 100%;
+    min-height: 100vh;
+    //height: 100vh;
+    background-color: $backgroundColor;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .wrapperLogin {
+        width: 100%;
+        text-align: center;
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include tablet-portait {
+            width: 60%;
+        }
+
+        @include desktop {
+            width: 40%;
+        }
+
+        .logoImg {
+            display: none;
+            width: 40%;
+            //margin-top: calc(5em - (10vh));
+
+            @include tablet {
+                display: inline-block;
+                padding-bottom: 2em;
+            }
+
+            @include tablet-portait {
+                display: none;
+            }
+
+            @include desktop {
+                display: inline-block;
+            }
+        }
+        
+        .loginText {
+            font-size: 2em;
+            margin-top: .5em;
+
+            @include tablet {
+                font-size: 3em;
+            }
+
+            @include tablet-portait {
+                //font-size: 2em;
+            }
+        }
+    }
+}
+
+
+/* Login Form Container */
+
+.loginFormContainer {
+ position: relative;
+}
+
+
+/* Input Component */
+
+.inputContainer {
+    width: 80%;
+    margin: 2em auto;
+    border-bottom: rgba($color: #666666, $alpha: .3) 1px solid;
+
+
+    input {
+        width: 80%;
+        height: 2em;
+        background-color: $backgroundColor;
+        text-align: center;
+        border: none;
+        position: relative;
+        line-height: 2em;
+        font-size: 1em;
+
+
+        &:focus {
+            outline: none;
+        }
+
+        @include tablet {
+            line-height: 3em;
+            height: 3em; 
+            font-size: 1.5em;
+        }
+
+        &::placeholder {
+            opacity: .5;
+        } 
+    }
+
+    .icon {
+        width: $iconSize;
+        color: $grey;
+        position: absolute;
+        margin-top: .5em;
+
+        @include tablet {
+            height: 1.5em;
+            width: 1.5em;
+            margin-top: 1.5em;
+        }
+    }
+}
+
+
+/* Submit Button */
+
+.submitButtonContainer {
+    width: 30%;
+    height: 2.8em;
+    margin: 2em auto;
+    line-height: 2.5em;
+    border-radius: 25px;
+    box-shadow: 0 .2em 1em rgba($color: #666666, $alpha: .5);
+
+    @include tablet {
+        margin: 2.5em auto;
+    }
+
+    @include desktop {
+        width: 20%;
+    }
+
+    .icon {
+        margin-top: .6em;
+        height: 1.5em;
+        width: 1.5em;
+        color: $grey;
+    }
+}
+
+
+/* Info Component */
+
+.infoContainer {
+    width: 80%;
+    margin: 0 auto;
+    padding: .5em;
+    position: relative;
+    border: 1px $grey solid;
+    border-radius: 10px;
+
+    @include desktop() {
+        width: 50%;
+        position: absolute;
+        z-index: 999;
+        top: -48vh;
+        right: -28vw;
+        border: none;
+        background-color: rgba($color: #fa6666, $alpha: .3);
+        box-shadow: 0 .2em .9em rgba($color: #666666, $alpha: .5);
+    }
+
+    ol {
+        line-height: 2em;
+
+        @include tablet() {
+            margin: 1em auto;
+            width: 70%;
+            font-size: 1.2em;
+        }
+
+        @include desktop() {
+            font-size: 1em;
+        }
+    }
+
+    .infoCloseIcon {
+        position: absolute;
+        left: 79vw;
+        top: .5vh;
+
+        @include tablet() {
+            font-size: 1.4em;
+            left: 61.5vw;
+            top: 1vh;
+        }
+
+        @include desktop() {
+            font-size: 1.2em;
+            left: 19.2vw;
+            top: 1vh;
+        }
+    }
+}
+
+
+
+
+////////* REGISTER *////////
