@@ -1,6 +1,5 @@
-import logo from '../../assets/shopscopeLogo.png';
+import logo from '../../../assets/shopscopeLogo.png';
 import LoginFormComponent from './LoginFormComponent';
-import '../../css/style.css';
 
 const LoginPage = () => {
     return (

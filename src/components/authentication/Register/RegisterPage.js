@@ -1,4 +1,4 @@
-import logo from '../../assets/shopscopeLogo.png';
+import logo from '../../../assets/shopscopeLogo.png';
 import RegisterFormComponent from './RegisterFormComponent';
 
 const RegisterPage = () => {
