@@ -5,16 +5,13 @@
   color: #666666;
 }
 
-/* p {
-    color: $grey;
-} */
 a {
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Login Page */
-.loginPage {
+/* Login & Register Page */
+.loginPage, .registerPage {
   width: 100%;
   min-height: 100vh;
   background-color: #F7F9FC;
@@ -31,74 +28,104 @@ a {
           align-items: center;
 }
 
-.loginPage .wrapperLogin {
+.loginPage .wrapperLogin, .loginPage .wrapperRegister, .registerPage .wrapperLogin, .registerPage .wrapperRegister {
   width: 100%;
   text-align: center;
+  margin: 5vh 0;
 }
 
 @media screen and (min-width: 481px) {
-  .loginPage .wrapperLogin {
+  .loginPage .wrapperLogin, .loginPage .wrapperRegister, .registerPage .wrapperLogin, .registerPage .wrapperRegister {
     width: 80%;
   }
 }
 
-@media screen and (min-width: 769px) {
-  .loginPage .wrapperLogin {
-    width: 60%;
+@media screen and (min-width: 840px) {
+  .loginPage .wrapperLogin, .loginPage .wrapperRegister, .registerPage .wrapperLogin, .registerPage .wrapperRegister {
+    width: 80%;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .loginPage .wrapperLogin {
-    width: 40%;
+  .loginPage .wrapperLogin, .loginPage .wrapperRegister, .registerPage .wrapperLogin, .registerPage .wrapperRegister {
+    width: 60%;
   }
 }
 
-.loginPage .wrapperLogin .logoImg {
+.loginPage .wrapperLogin .logoImg, .loginPage .wrapperRegister .logoImg, .registerPage .wrapperLogin .logoImg, .registerPage .wrapperRegister .logoImg {
   display: none;
   width: 40%;
 }
 
-@media screen and (min-width: 481px) {
-  .loginPage .wrapperLogin .logoImg {
-    display: inline-block;
-    padding-bottom: 2em;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .loginPage .wrapperLogin .logoImg {
+@media screen and (min-width: 840px) {
+  .loginPage .wrapperLogin .logoImg, .loginPage .wrapperRegister .logoImg, .registerPage .wrapperLogin .logoImg, .registerPage .wrapperRegister .logoImg {
     display: none;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .loginPage .wrapperLogin .logoImg {
+  .loginPage .wrapperLogin .logoImg, .loginPage .wrapperRegister .logoImg, .registerPage .wrapperLogin .logoImg, .registerPage .wrapperRegister .logoImg {
     display: inline-block;
+    width: 20em;
   }
 }
 
-.loginPage .wrapperLogin .loginText {
+.loginPage .wrapperLogin .loginText, .loginPage .wrapperRegister .loginText, .registerPage .wrapperLogin .loginText, .registerPage .wrapperRegister .loginText {
   font-size: 2em;
   margin-top: .5em;
 }
 
 @media screen and (min-width: 481px) {
-  .loginPage .wrapperLogin .loginText {
+  .loginPage .wrapperLogin .loginText, .loginPage .wrapperRegister .loginText, .registerPage .wrapperLogin .loginText, .registerPage .wrapperRegister .loginText {
     font-size: 3em;
   }
 }
 
-/* Login Form Container */
-.loginFormContainer {
-  position: relative;
+.loginPage .wrapperLogin .infoText, .loginPage .wrapperRegister .infoText, .registerPage .wrapperLogin .infoText, .registerPage .wrapperRegister .infoText {
+  margin: 0 auto;
+  width: 80%;
+}
+
+@media screen and (min-width: 481px) {
+  .loginPage .wrapperLogin .infoText, .loginPage .wrapperRegister .infoText, .registerPage .wrapperLogin .infoText, .registerPage .wrapperRegister .infoText {
+    font-size: 1.4em;
+  }
+}
+
+/* All Input Components Container */
+.allInputsContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 /* Input Component */
 .inputContainer {
-  width: 80%;
-  margin: 2em auto;
+  width: 70%;
+  margin: 1em auto;
   border-bottom: rgba(102, 102, 102, 0.3) 1px solid;
+}
+
+@media screen and (min-width: 481px) {
+  .inputContainer {
+    margin: 1em auto;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .inputContainer {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .inputContainer {
+    width: 40%;
+    margin: 1.5em auto;
+  }
 }
 
 .inputContainer input {
@@ -121,6 +148,14 @@ a {
     line-height: 3em;
     height: 3em;
     font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .inputContainer input {
+    height: 1.5em;
+    line-height: 1.5em;
+    font-size: 1.2em;
   }
 }
 
@@ -152,6 +187,12 @@ a {
     height: 1.5em;
     width: 1.5em;
     margin-top: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .inputContainer .icon {
+    margin-top: 0;
   }
 }
 
@@ -197,11 +238,12 @@ a {
 
 @media screen and (min-width: 1025px) {
   .infoContainer {
-    width: 50%;
+    width: 350px;
+    font-size: 1em;
     position: absolute;
     z-index: 999;
-    top: -48vh;
-    right: -28vw;
+    top: 5vh;
+    right: 2vw;
     border: none;
     background-color: rgba(250, 102, 102, 0.3);
     -webkit-box-shadow: 0 0.2em 0.9em rgba(102, 102, 102, 0.5);
@@ -211,6 +253,7 @@ a {
 
 .infoContainer ol {
   line-height: 2em;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 481px) {
@@ -223,7 +266,8 @@ a {
 
 @media screen and (min-width: 1025px) {
   .infoContainer ol {
-    font-size: 1em;
+    width: 100%;
+    font-size: .8em;
   }
 }
 
@@ -244,8 +288,8 @@ a {
 @media screen and (min-width: 1025px) {
   .infoContainer .infoCloseIcon {
     font-size: 1.2em;
-    left: 19.2vw;
-    top: 1vh;
+    left: 340px;
+    top: 5px;
   }
 }
 /*# sourceMappingURL=style.css.map */

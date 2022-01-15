@@ -4,7 +4,7 @@ $iconSize: 15px;
 
 /* Media Query Breakpoint Variables */
 $breakpoint-tablet: 481px;
-$breakpoint-tablet-portait: 769px;
+$breakpoint-tablet-portait: 840px;
 $breakpoint-desktop: 1025px;
 
 /* Mixings (Breakpoints) */
@@ -33,58 +33,47 @@ $breakpoint-desktop: 1025px;
     color: $grey;
 }
 
-/* p {
-    color: $grey;
-} */
-
 a {
     text-decoration: none;
-    //color: $grey;
     font-weight: bold;
   }
 
 
 
 
-////////* LOGIN *////////
+////////* LOGIN & REGISTER *////////
 
-/* Login Page */
+/* Login & Register Page */
 
-.loginPage {
+.loginPage, .registerPage {
     width: 100%;
     min-height: 100vh;
-    //height: 100vh;
     background-color: $backgroundColor;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
-    .wrapperLogin {
+    .wrapperLogin, .wrapperRegister {
         width: 100%;
         text-align: center;
+        margin: 5vh 0;
 
         @include tablet {
             width: 80%;
         }
 
         @include tablet-portait {
-            width: 60%;
+            width: 80%;
         }
 
         @include desktop {
-            width: 40%;
+            width: 60%;
         }
 
         .logoImg {
             display: none;
             width: 40%;
-            //margin-top: calc(5em - (10vh));
-
-            @include tablet {
-                display: inline-block;
-                padding-bottom: 2em;
-            }
 
             @include tablet-portait {
                 display: none;
@@ -92,6 +81,7 @@ a {
 
             @include desktop {
                 display: inline-block;
+                width: 20em;
             }
         }
         
@@ -102,29 +92,49 @@ a {
             @include tablet {
                 font-size: 3em;
             }
+        }
 
-            @include tablet-portait {
-                //font-size: 2em;
+        .infoText {
+            margin: 0 auto;
+            width: 80%;
+
+            @include tablet {
+                font-size: 1.4em;
             }
         }
     }
 }
 
 
-/* Login Form Container */
+/* All Input Components Container */
 
-.loginFormContainer {
- position: relative;
+.allInputsContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 
 /* Input Component */
 
 .inputContainer {
-    width: 80%;
-    margin: 2em auto;
+    width: 70%;
+    margin: 1em auto;
     border-bottom: rgba($color: #666666, $alpha: .3) 1px solid;
 
+    @include tablet {
+        margin: 1em auto;
+    }
+
+    @include tablet-portait() {
+        width: 40%;
+    }
+
+    @include desktop() {
+        width: 40%;
+        margin: 1.5em auto;
+    }
 
     input {
         width: 80%;
@@ -147,6 +157,12 @@ a {
             font-size: 1.5em;
         }
 
+        @include desktop() {
+            height: 1.5em;
+            line-height: 1.5em;
+            font-size: 1.2em;
+        }
+
         &::placeholder {
             opacity: .5;
         } 
@@ -162,6 +178,10 @@ a {
             height: 1.5em;
             width: 1.5em;
             margin-top: 1.5em;
+        }
+
+        @include desktop() {
+            margin-top: 0;
         }
     }
 }
@@ -205,11 +225,12 @@ a {
     border-radius: 10px;
 
     @include desktop() {
-        width: 50%;
+        width: 350px;
+        font-size: 1em;
         position: absolute;
         z-index: 999;
-        top: -48vh;
-        right: -28vw;
+        top: 5vh;
+        right: 2vw;
         border: none;
         background-color: rgba($color: #fa6666, $alpha: .3);
         box-shadow: 0 .2em .9em rgba($color: #666666, $alpha: .5);
@@ -217,6 +238,7 @@ a {
 
     ol {
         line-height: 2em;
+        margin: 0 auto;
 
         @include tablet() {
             margin: 1em auto;
@@ -225,7 +247,8 @@ a {
         }
 
         @include desktop() {
-            font-size: 1em;
+            width: 100%;
+            font-size: .8em;
         }
     }
 
@@ -242,13 +265,8 @@ a {
 
         @include desktop() {
             font-size: 1.2em;
-            left: 19.2vw;
-            top: 1vh;
+            left: 340px;
+            top: 5px;
         }
     }
 }
-
-
-
-
-////////* REGISTER *////////
