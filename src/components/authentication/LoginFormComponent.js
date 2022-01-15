@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import InputComponent from "./InputComponent"
 import InfoComponent from "./InfoComponent";
 import { FiUser, FiKey, FiSend, FiXCircle } from "react-icons/fi";
@@ -8,6 +8,7 @@ const LoginFormComponent = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+
     const [showUserMessage, setShowUserMessage] = useState(false);
     const [userMessage, setUserMessage] = useState('');
 
@@ -18,9 +19,7 @@ const LoginFormComponent = () => {
 
     const submit = async () => {
 
-        clearInputs();
-
-        await fetch("http://localhost:8080/user/login", {
+        await fetch(`http://${process.env.REACT_APP_LOCAL_IP}:8080/user/login`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -32,17 +31,18 @@ const LoginFormComponent = () => {
                 password: password
             })
         })
-        .then(async (response) => {
-            const responseJson = await response.json();
-            if(response.ok) {
-                console.log(responseJson);
-                return responseJson;
-            }
-            else {
-                setUserMessage(responseJson.message);
-                setShowUserMessage(true);
-            }
-        })
+            .then(async (response) => {
+                clearInputs();
+                const responseJson = await response.json();
+                if (response.ok) {
+                    console.log(responseJson);
+                    return responseJson;
+                }
+                else {
+                    setUserMessage(responseJson.message);
+                    setShowUserMessage(true);
+                }
+            })
     }
 
     return (
@@ -50,10 +50,10 @@ const LoginFormComponent = () => {
             {
                 showUserMessage ? <InfoComponent info={userMessage} icon={<FiXCircle />} onClick={setShowUserMessage} /> : null
             }
-            
-            <InputComponent onChange={setUsername} value={username} placeholder={'Username'} icon={<FiUser className="icon"/>}/>
-            <InputComponent onChange={setPassword} value={password} placeholder={'Password'} icon={<FiKey className="icon" />}/>
-            <SubmitButtonComponent onClick={submit} icon={<FiSend className="icon"/>} />
+
+            <InputComponent onChange={setUsername} value={username} placeholder={'Username'} icon={<FiUser className="icon" />} />
+            <InputComponent onChange={setPassword} value={password} placeholder={'Password'} icon={<FiKey className="icon" />} />
+            <SubmitButtonComponent onClick={submit} icon={<FiSend className="icon" />} />
         </div>
     )
 }
