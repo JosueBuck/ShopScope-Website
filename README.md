@@ -2,7 +2,7 @@
 
 In Progress...
 
-Author: Josue Buck
+Author: [Josue Buck](https://josuebuck.de)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
