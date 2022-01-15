@@ -62,7 +62,7 @@ const RegisterFormComponent = () => {
             {
                 showUserMesssage ? <InfoComponent info={userMessage} icon={<FiXCircle />} onClick={setShowUserMessage} /> : null
             }
-            <div className="allInputsContainer">
+            <div className="allInputsRegisterContainer">
                 <InputComponent onChange={setFirstName} value={firstName} placeholder={'First Name'} icon={<FiToggleLeft className="icon" />} />
                 <InputComponent onChange={setLastName} value={lastName} placeholder={'Last Name'} icon={<FiToggleRight className="icon" />} />
                 <InputComponent onChange={setUsername} value={username} placeholder={'Username'} icon={<FiUser className="icon" />} />

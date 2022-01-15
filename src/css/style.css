@@ -93,11 +93,19 @@ a {
 }
 
 /* All Input Components Container */
-.allInputsContainer {
+.allInputsRegisterContainer {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.allInputsLoginContainer {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }

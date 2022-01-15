@@ -51,9 +51,13 @@ const LoginFormComponent = () => {
                 showUserMessage ? <InfoComponent info={userMessage} icon={<FiXCircle />} onClick={setShowUserMessage} /> : null
             }
 
-            <InputComponent onChange={setUsername} value={username} placeholder={'Username'} icon={<FiUser className="icon" />} />
-            <InputComponent onChange={setPassword} value={password} placeholder={'Password'} icon={<FiKey className="icon" />} />
+            <div className="allInputsLoginContainer">
+                <InputComponent onChange={setUsername} value={username} placeholder={'Username'} icon={<FiUser className="icon" />} />
+                <InputComponent onChange={setPassword} value={password} placeholder={'Password'} icon={<FiKey className="icon" />} />
+            </div>
+
             <SubmitButtonComponent onClick={submit} icon={<FiSend className="icon" />} />
+
         </div>
     )
 }
