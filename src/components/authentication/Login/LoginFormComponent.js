@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import InputComponent from "./InputComponent"
-import InfoComponent from "./InfoComponent";
+import InputComponent from "../InputComponent"
+import InfoComponent from "../InfoComponent";
 import { FiUser, FiKey, FiSend, FiXCircle } from "react-icons/fi";
-import SubmitButtonComponent from "./SubmitButtonComponent";
+import SubmitButtonComponent from "../SubmitButtonComponent";
 
 const LoginFormComponent = () => {
 

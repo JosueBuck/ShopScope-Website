@@ -1,7 +1,7 @@
 import { useState } from "react";
-import InputComponent from "./InputComponent";
-import SubmitButtonComponent from "./SubmitButtonComponent";
-import InfoComponent from "./InfoComponent";
+import InputComponent from "../InputComponent";
+import SubmitButtonComponent from "../SubmitButtonComponent";
+import InfoComponent from "../InfoComponent";
 import { FiUser, FiKey, FiMail, FiToggleLeft, FiToggleRight, FiSend, FiXCircle } from "react-icons/fi";
 
 const RegisterFormComponent = () => {
