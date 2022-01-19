@@ -10,8 +10,8 @@ a {
   font-weight: bold;
 }
 
-/* Login & Register Page */
-.loginPage, .registerPage {
+/* Login & Register & Forgot Password */
+.loginPage, .registerPage, .forgotPasswordPage {
   width: 100%;
   min-height: 100vh;
   background-color: #F7F9FC;
@@ -26,68 +26,69 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
-.loginPage .wrapperLogin, .loginPage .wrapperRegister, .registerPage .wrapperLogin, .registerPage .wrapperRegister {
+.loginPage .wrapperLogin, .loginPage .wrapperRegister, .loginPage .wrapperForgotPassword, .registerPage .wrapperLogin, .registerPage .wrapperRegister, .registerPage .wrapperForgotPassword, .forgotPasswordPage .wrapperLogin, .forgotPasswordPage .wrapperRegister, .forgotPasswordPage .wrapperForgotPassword {
   width: 100%;
   text-align: center;
-  margin: 5vh 0;
+  margin-bottom: 5vh;
 }
 
 @media screen and (min-width: 481px) {
-  .loginPage .wrapperLogin, .loginPage .wrapperRegister, .registerPage .wrapperLogin, .registerPage .wrapperRegister {
-    width: 80%;
+  .loginPage .wrapperLogin, .loginPage .wrapperRegister, .loginPage .wrapperForgotPassword, .registerPage .wrapperLogin, .registerPage .wrapperRegister, .registerPage .wrapperForgotPassword, .forgotPasswordPage .wrapperLogin, .forgotPasswordPage .wrapperRegister, .forgotPasswordPage .wrapperForgotPassword {
+    margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 840px) {
-  .loginPage .wrapperLogin, .loginPage .wrapperRegister, .registerPage .wrapperLogin, .registerPage .wrapperRegister {
-    width: 80%;
+  .loginPage .wrapperLogin, .loginPage .wrapperRegister, .loginPage .wrapperForgotPassword, .registerPage .wrapperLogin, .registerPage .wrapperRegister, .registerPage .wrapperForgotPassword, .forgotPasswordPage .wrapperLogin, .forgotPasswordPage .wrapperRegister, .forgotPasswordPage .wrapperForgotPassword {
+    margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .loginPage .wrapperLogin, .loginPage .wrapperRegister, .registerPage .wrapperLogin, .registerPage .wrapperRegister {
-    width: 60%;
+  .loginPage .wrapperLogin, .loginPage .wrapperRegister, .loginPage .wrapperForgotPassword, .registerPage .wrapperLogin, .registerPage .wrapperRegister, .registerPage .wrapperForgotPassword, .forgotPasswordPage .wrapperLogin, .forgotPasswordPage .wrapperRegister, .forgotPasswordPage .wrapperForgotPassword {
+    margin-bottom: 0;
   }
 }
 
-.loginPage .wrapperLogin .logoImg, .loginPage .wrapperRegister .logoImg, .registerPage .wrapperLogin .logoImg, .registerPage .wrapperRegister .logoImg {
+.loginPage .wrapperLogin .logoImg, .loginPage .wrapperRegister .logoImg, .loginPage .wrapperForgotPassword .logoImg, .registerPage .wrapperLogin .logoImg, .registerPage .wrapperRegister .logoImg, .registerPage .wrapperForgotPassword .logoImg, .forgotPasswordPage .wrapperLogin .logoImg, .forgotPasswordPage .wrapperRegister .logoImg, .forgotPasswordPage .wrapperForgotPassword .logoImg {
   display: none;
   width: 40%;
 }
 
 @media screen and (min-width: 840px) {
-  .loginPage .wrapperLogin .logoImg, .loginPage .wrapperRegister .logoImg, .registerPage .wrapperLogin .logoImg, .registerPage .wrapperRegister .logoImg {
+  .loginPage .wrapperLogin .logoImg, .loginPage .wrapperRegister .logoImg, .loginPage .wrapperForgotPassword .logoImg, .registerPage .wrapperLogin .logoImg, .registerPage .wrapperRegister .logoImg, .registerPage .wrapperForgotPassword .logoImg, .forgotPasswordPage .wrapperLogin .logoImg, .forgotPasswordPage .wrapperRegister .logoImg, .forgotPasswordPage .wrapperForgotPassword .logoImg {
     display: none;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .loginPage .wrapperLogin .logoImg, .loginPage .wrapperRegister .logoImg, .registerPage .wrapperLogin .logoImg, .registerPage .wrapperRegister .logoImg {
+  .loginPage .wrapperLogin .logoImg, .loginPage .wrapperRegister .logoImg, .loginPage .wrapperForgotPassword .logoImg, .registerPage .wrapperLogin .logoImg, .registerPage .wrapperRegister .logoImg, .registerPage .wrapperForgotPassword .logoImg, .forgotPasswordPage .wrapperLogin .logoImg, .forgotPasswordPage .wrapperRegister .logoImg, .forgotPasswordPage .wrapperForgotPassword .logoImg {
     display: inline-block;
     width: 20em;
   }
 }
 
-.loginPage .wrapperLogin .loginText, .loginPage .wrapperRegister .loginText, .registerPage .wrapperLogin .loginText, .registerPage .wrapperRegister .loginText {
+.loginPage .wrapperLogin .loginText, .loginPage .wrapperRegister .loginText, .loginPage .wrapperForgotPassword .loginText, .registerPage .wrapperLogin .loginText, .registerPage .wrapperRegister .loginText, .registerPage .wrapperForgotPassword .loginText, .forgotPasswordPage .wrapperLogin .loginText, .forgotPasswordPage .wrapperRegister .loginText, .forgotPasswordPage .wrapperForgotPassword .loginText {
   font-size: 2em;
   margin-top: .5em;
 }
 
 @media screen and (min-width: 481px) {
-  .loginPage .wrapperLogin .loginText, .loginPage .wrapperRegister .loginText, .registerPage .wrapperLogin .loginText, .registerPage .wrapperRegister .loginText {
+  .loginPage .wrapperLogin .loginText, .loginPage .wrapperRegister .loginText, .loginPage .wrapperForgotPassword .loginText, .registerPage .wrapperLogin .loginText, .registerPage .wrapperRegister .loginText, .registerPage .wrapperForgotPassword .loginText, .forgotPasswordPage .wrapperLogin .loginText, .forgotPasswordPage .wrapperRegister .loginText, .forgotPasswordPage .wrapperForgotPassword .loginText {
     font-size: 3em;
   }
 }
 
-.loginPage .wrapperLogin .infoText, .loginPage .wrapperRegister .infoText, .registerPage .wrapperLogin .infoText, .registerPage .wrapperRegister .infoText {
+.loginPage .wrapperLogin .infoText, .loginPage .wrapperRegister .infoText, .loginPage .wrapperForgotPassword .infoText, .registerPage .wrapperLogin .infoText, .registerPage .wrapperRegister .infoText, .registerPage .wrapperForgotPassword .infoText, .forgotPasswordPage .wrapperLogin .infoText, .forgotPasswordPage .wrapperRegister .infoText, .forgotPasswordPage .wrapperForgotPassword .infoText {
   margin: 0 auto;
   width: 80%;
 }
 
 @media screen and (min-width: 481px) {
-  .loginPage .wrapperLogin .infoText, .loginPage .wrapperRegister .infoText, .registerPage .wrapperLogin .infoText, .registerPage .wrapperRegister .infoText {
+  .loginPage .wrapperLogin .infoText, .loginPage .wrapperRegister .infoText, .loginPage .wrapperForgotPassword .infoText, .registerPage .wrapperLogin .infoText, .registerPage .wrapperRegister .infoText, .registerPage .wrapperForgotPassword .infoText, .forgotPasswordPage .wrapperLogin .infoText, .forgotPasswordPage .wrapperRegister .infoText, .forgotPasswordPage .wrapperForgotPassword .infoText {
     font-size: 1.4em;
   }
 }

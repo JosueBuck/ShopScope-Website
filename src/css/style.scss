@@ -36,16 +36,16 @@ $breakpoint-desktop: 1025px;
 a {
     text-decoration: none;
     font-weight: bold;
-  }
+}
 
 
 
 
 ////////* LOGIN & REGISTER *////////
 
-/* Login & Register Page */
+/* Login & Register & Forgot Password */
 
-.loginPage, .registerPage {
+.loginPage, .registerPage, .forgotPasswordPage {
     width: 100%;
     min-height: 100vh;
     background-color: $backgroundColor;
@@ -53,22 +53,24 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
 
-    .wrapperLogin, .wrapperRegister {
+    .wrapperLogin, .wrapperRegister, .wrapperForgotPassword {
+        
         width: 100%;
         text-align: center;
-        margin: 5vh 0;
+        margin-bottom: 5vh;
 
         @include tablet {
-            width: 80%;
+            margin-bottom: 0;
         }
 
         @include tablet-portait {
-            width: 80%;
+            margin-bottom: 0;
         }
 
         @include desktop {
-            width: 60%;
+            margin-bottom: 0;
         }
 
         .logoImg {
