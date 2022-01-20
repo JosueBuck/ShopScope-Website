@@ -1,8 +1,11 @@
 /* Media Query Breakpoint Variables */
 /* Mixings (Breakpoints) */
-/* Basic Styling */
 * {
   color: #666666;
+}
+
+body {
+  background-color: #F7F9FC;
 }
 
 a {
@@ -300,5 +303,91 @@ a {
     left: 340px;
     top: 5px;
   }
+}
+
+/* Recipe Widget */
+.recipeWidgetContainer {
+  width: calc(30vh - (30vh * 0.3));
+  height: 30vh;
+  margin: 20px;
+  border-radius: calc(30vh / 15);
+  -webkit-box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+          box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.recipeWidgetContainer .recipeWidgetPicture {
+  height: 45%;
+  border-radius: calc(30vh / 15);
+  background-color: #666666;
+}
+
+.recipeWidgetContainer .recipeWidgetInfoContainer {
+  width: 85%;
+  height: 48%;
+  padding-top: 8%;
+  padding-bottom: 2%;
+  margin: 0 auto;
+}
+
+.recipeWidgetContainer .recipeWidgetInfoContainer .recipeWidgetNameContainer {
+  height: 70%;
+  overflow: scroll;
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer and Edge */
+}
+
+.recipeWidgetContainer .recipeWidgetInfoContainer .recipeWidgetNameContainer .recipeName {
+  width: 80%;
+  font-weight: 600;
+  font-size: calc(30vh / 16.5);
+  margin: 0;
+}
+
+.recipeWidgetContainer .recipeWidgetInfoContainer .recipeWidgetNameContainer .recipeGarnishName {
+  font-size: calc(30vh / 21);
+  margin: 0;
+}
+
+.recipeWidgetContainer .recipeWidgetInfoContainer .recipeWidgetNameContainer::-webkit-scrollbar {
+  width: 0px;
+  /* For Chrome, Safari, and Opera */
+}
+
+.recipeWidgetContainer .recipeWidgetInfoContainer .recipeWidgetInfoIconsContainer {
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recipeWidgetContainer .recipeWidgetInfoContainer .recipeWidgetInfoIconsContainer .cookingTimeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.recipeWidgetContainer .recipeWidgetInfoContainer .recipeWidgetInfoIconsContainer .cookingTimeContainer .cookingTimeIcon {
+  width: calc(30vh / 12);
+  height: calc(30vh / 12);
+}
+
+.recipeWidgetContainer .recipeWidgetInfoContainer .recipeWidgetInfoIconsContainer .cookingTimeContainer .passive {
+  color: #aaaaaa;
+}
+
+.recipeWidgetContainer .recipeWidgetInfoContainer .recipeWidgetInfoIconsContainer .recipeTypeContainer .recipeTypeIcon {
+  width: calc(30vh / 12);
+  height: calc(30vh / 12);
 }
 /*# sourceMappingURL=style.css.map */

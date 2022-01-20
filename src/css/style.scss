@@ -1,6 +1,12 @@
+
 $grey: #666666;
 $backgroundColor: #F7F9FC;
 $iconSize: 15px;
+
+
+
+
+////////* RESPONSIVE *////////
 
 /* Media Query Breakpoint Variables */
 $breakpoint-tablet: 481px;
@@ -27,10 +33,16 @@ $breakpoint-desktop: 1025px;
 }
 
 
-/* Basic Styling */
+
+
+////////* GENERAL STYLING *////////
 
 * {
     color: $grey;
+}
+
+body {
+    background-color: #F7F9FC;
 }
 
 a {
@@ -41,7 +53,7 @@ a {
 
 
 
-////////* LOGIN & REGISTER *////////
+////////* LOGIN & REGISTER & FORGOT PASSWORD *////////
 
 /* Login & Register & Forgot Password */
 
@@ -277,4 +289,99 @@ a {
             top: 5px;
         }
     }
+}
+
+
+
+
+////////* RECIPES *////////
+
+/* Recipe Widget */
+
+$size: 30vh;
+
+.recipeWidgetContainer {
+
+    width: calc(#{$size} - (#{$size} * 0.3));
+    height: $size;
+    margin: 20px;
+    border-radius: calc(#{$size} / 15);
+    box-shadow: 0 .2em 1em rgba($color: #666666, $alpha: .5);
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+
+    
+
+    .recipeWidgetPicture {
+        height: 45%;
+        border-radius: calc(#{$size} / 15);
+        background-color: $grey;
+    }
+
+    .recipeWidgetInfoContainer {
+
+        width: 85%;
+        height: 48%;
+        padding-top: 8%; 
+        padding-bottom: 2%;
+        margin: 0 auto;
+        
+
+        .recipeWidgetNameContainer {
+
+            height: 70%;
+            overflow: scroll;
+            scrollbar-width: none; /* For Firefox */
+            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+
+            .recipeName {
+                width: 80%;
+                font-weight: 600;
+                font-size: calc(#{$size} / 16.5);
+                margin: 0;
+            }
+
+            .recipeGarnishName {
+                font-size: calc(#{$size} / 21);
+                margin: 0;
+            }
+        }
+
+        .recipeWidgetNameContainer::-webkit-scrollbar {
+            width: 0px; /* For Chrome, Safari, and Opera */
+        }
+  
+    
+        .recipeWidgetInfoIconsContainer {
+
+            height: 30%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            .cookingTimeContainer {
+
+                display: flex;
+
+                .cookingTimeIcon {
+                    width: calc(#{$size} / 12);
+                    height: calc(#{$size} / 12);
+                }
+
+                .passive {
+                    color: #aaaaaa;
+                }
+            }
+
+            .recipeTypeContainer {
+
+                .recipeTypeIcon {
+                    width: calc(#{$size} / 12);
+                    height: calc(#{$size} / 12);
+                }
+            }
+            
+        }  
+    }  
 }
