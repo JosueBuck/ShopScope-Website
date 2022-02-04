@@ -53,7 +53,7 @@ a {
 
 
 
-////////* LOGIN & REGISTER & FORGOT PASSWORD *////////
+////////* AUTHENTIFICATION *////////
 
 /* Login & Register & Forgot Password */
 
@@ -294,22 +294,251 @@ a {
 
 
 
+////////* GENERAL *////////
+
+/* Home Page */
+
+$wrapperWidth: 85%;
+$wrapperWidthTabletPortait: 70%;
+
+.homePage {
+
+    width: 100%;
+    min-height: 100vh;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  */
+    //position: relative;
+
+    .userAccountIconContainer {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+
+        .icon {
+            font-size: 35px;
+        }
+    }
+
+    .homePageWrapper {
+
+        width: 100%;
+        margin: 40px 0;
+    
+        .welcomeContainer {
+            
+            width: $wrapperWidth;
+            margin: 0 auto;
+            margin-bottom: 1vh;
+
+            @include tablet() {
+                display: none;
+            }
+
+            .welcomeName {
+                font-size: 2rem;
+                margin: 0;
+            }
+    
+            .welcomeMessage {
+                font-size: 1rem;
+                margin: 0;
+            }
+        }
+    
+        .latestRecipesContainer {
+    
+            width: 100%;
+
+            @include tablet() {
+                
+                text-align: center;
+                
+            }
+            
+            .latestRecipesText {
+
+                padding-left: calc((100% - #{$wrapperWidth}) / 2);
+
+                p {
+                    margin: 0;
+                    font-size: 20px;
+                }
+
+                @include tablet() {
+                    
+                    padding: 0;
+                }
+
+            }
+    
+            .latestRecipesScrollContainer {
+    
+                padding-left: calc((100% - #{$wrapperWidth}) / 2);
+                overflow: scroll;
+                scrollbar-width: none; /* For Firefox */
+                -ms-overflow-style: none; /* For Internet Explorer and Edge */
+
+                @include tablet() {
+                    padding: 0;
+                    overflow: visible;
+                }
+
+                .latestRecipesScrollContent {
+
+                    display: flex;
+                    width: min-content;
+
+                    @include tablet() {
+                        width: $wrapperWidth;
+                        margin: 0 auto;
+                        padding: 0;
+                        justify-content: space-between;
+                    }
+
+                    @include tablet-portait() {
+                        width: $wrapperWidthTabletPortait;
+                    }
+
+                }
+    
+            }
+        }
+
+        .latestRecipesScrollContainer::-webkit-scrollbar {
+            width: 0px; /* For Chrome, Safari, and Opera */
+        }
+
+        .currentListContainer {
+
+            width: $wrapperWidth;
+            margin: 10px auto;
+
+            @include tablet() {
+                margin: 0 auto;
+            } 
+
+            @include tablet-portait() {
+                width: $wrapperWidthTabletPortait;
+            }
+
+            @include desktop() {
+                display: none;
+            }
+
+            .currentListText {
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                @include tablet() {
+                    width: fit-content;
+                    margin: 0 auto;
+                } 
+
+                p {
+                    margin: 0;
+                    margin-right: 10px;
+                    font-size: 20px;
+                }
+            }
+
+            .homePageListContainer {
+                margin-top: 10px;
+            }
+        }
+    }
+    
+
+}
+
+
+
+
+////////* LISTS *////////
+
+/* List Widget */
+
+.listWidgetContainer {
+
+    width: 100%;
+    height: 180px;
+    margin: 10px 0;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 .2em 1em rgba($color: #666666, $alpha: .5);
+
+
+    .listWidgetPicture {
+        background-color: $grey;
+        height: 80%;
+        border-radius: 20px;
+        background-position: center;
+    }
+
+    .listWidgetInfoContainer {
+
+        height: 20%;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .listName {
+            margin: 0;
+        }
+
+        .listItemCountContainer {
+            width: 25px;
+            height: 25px;
+            background-color: #F7F9FC;
+            border-radius: 15px;
+            box-shadow: 0 .2em 1em rgba($color: #666666, $alpha: .5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+        }
+    }
+}
+
+
+
+
 ////////* RECIPES *////////
 
 /* Recipe Widget */
 
-$size: 30vh;
+$size: 250px;
+$sizeTablet: 175px;
+$sizeDesktop: 19vw;
+
 
 .recipeWidgetContainer {
 
     width: calc(#{$size} - (#{$size} * 0.3));
     height: $size;
-    margin: 20px;
+    margin: 10px 10px 20px 0px;
     border-radius: calc(#{$size} / 15);
     box-shadow: 0 .2em 1em rgba($color: #666666, $alpha: .5);
     background-color: #fff;
     position: relative;
     overflow: hidden;
+
+    @include tablet() {
+        width: calc(#{$sizeTablet} - (#{$sizeTablet} * 0.3));
+        height: $sizeTablet;
+        border-radius: calc(#{$sizeTablet} / 15);
+        margin: 0;
+    }
+
+    @include desktop() {
+        width: calc(#{$sizeDesktop} - (#{$sizeDesktop} * 0.3)); 
+        max-width: calc(#{$size} - (#{$size} * 0.3));;
+        height: $sizeDesktop;
+        max-height: $size;
+        border-radius: calc(#{$sizeDesktop} / 20);
+    }
 
     
 
@@ -317,6 +546,16 @@ $size: 30vh;
         height: 45%;
         border-radius: calc(#{$size} / 15);
         background-color: $grey;
+
+        @include tablet() {
+
+            border-radius: calc(#{$sizeTablet} / 15);
+        }
+    
+        @include desktop() {
+
+            border-radius: 0;
+        }
     }
 
     .recipeWidgetInfoContainer {
@@ -326,6 +565,7 @@ $size: 30vh;
         padding-top: 8%; 
         padding-bottom: 2%;
         margin: 0 auto;
+        text-align: start;
         
 
         .recipeWidgetNameContainer {
@@ -340,11 +580,23 @@ $size: 30vh;
                 font-weight: 600;
                 font-size: calc(#{$size} / 16.5);
                 margin: 0;
+
+                @include tablet() {
+                    font-size: calc(#{$sizeTablet} / 14);
+                }
+
+                @include desktop() {
+                    font-size: calc(#{$sizeTablet} / 12.5);
+                }
             }
 
             .recipeGarnishName {
                 font-size: calc(#{$size} / 21);
                 margin: 0;
+
+                @include desktop() {
+                    font-size: calc(#{$sizeTablet} / 13.5);
+                }
             }
         }
 
@@ -385,3 +637,282 @@ $size: 30vh;
         }  
     }  
 }
+
+
+/* Day Recipe */
+
+.dayRecipeContainer {
+    width: 100%;
+    height: min-content;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 .2em 1em rgba($color: #666666, $alpha: .5);
+    position: relative;
+    z-index: -2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    margin: 10px 0;
+
+    @include tablet() {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .backgroundFiller {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        background-color: #fff;
+        opacity: .8;
+        z-index: -1;
+        
+    }
+
+    .recipeInfo {
+        color: $grey;
+        margin: 9px 0px 9px 10px;
+        width: 50%;
+        
+        p {
+            margin: 0;
+        }
+
+        .recipeName {
+            font-weight: 600;
+        }
+
+        .garnishName {
+            font-size: 15px;
+        }
+    }
+
+    .closeIcon {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+}
+
+
+
+
+////////* WEEK *////////
+
+/* Week Component */
+
+.weekPlanContainer {
+
+    width: 100%;
+
+    @include tablet() {
+        margin: 0;
+        padding: 0;
+    }
+
+    .weekDaysScollContainer {
+        overflow: scroll;
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none; /* For Internet Explorer and Edge */
+        padding-left: calc((100% - #{$wrapperWidth}) / 2);
+
+        @include tablet() {
+            overflow: visible;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .yourWeekText {
+            display: none;
+
+            p {
+                margin: 0;
+                font-size: 20px;
+            }
+            
+
+            @include tablet() {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .weekDaysScollContent {
+
+            display: flex;
+            width: min-content;
+
+            @include tablet() {
+                
+                width: $wrapperWidth;
+                margin: 0 auto;
+                justify-content: space-between;
+                 
+            }
+
+            @include tablet-portait() {
+                width: $wrapperWidthTabletPortait;
+            }
+
+        }
+
+        .weekDaysSmallList {
+
+            display: none;
+
+            @include desktop() {
+                width: $wrapperWidthTabletPortait;
+                display: flex;
+                margin: 0 auto;
+                justify-content: right;
+                align-items: center;
+
+                p {
+                    margin-right: 10px;
+                }
+            }
+
+        }
+
+        @include tablet() {
+            padding: 0;
+            text-align: center;
+        }
+    }
+
+    .weekDaysScollContainer::-webkit-scrollbar {
+        width: 0px; /* For Chrome, Safari, and Opera */
+    }
+
+    .weekDayFoodTimeContainer {
+
+        width: $wrapperWidth;
+        margin: 0 auto;
+        text-align: center;
+
+        @include tablet() {
+            width: 70%;
+        }
+
+        .selectedDayName{
+            margin: 0;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .weekDayFoodTimeButtonContainer {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+
+            p {
+                font-size: 13px;
+            }
+        }
+
+        .weekFoodTimeCloseButton {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+    }
+
+}
+
+
+/* Week Button Components */
+
+.deleteWeekRecipesButton {
+
+    .icon {
+        font-size: 20px;
+        color: #B23030;
+    }
+    
+}
+
+.sendWeekRecipesButton {
+
+    .icon {
+        font-size: 20px;
+        color: #658B0F;
+    }
+
+}
+
+
+/* Day Component */
+
+.dayContainer {
+
+    width: 70px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 .2em 1em rgba($color: #666666, $alpha: .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-right: 8px;
+
+    @include tablet() {
+        width: 60px;
+        height: 90px;
+        margin: 0;
+    }
+
+    @include desktop() {
+        width: 70px;
+        height: 100px;
+    }
+
+    p {
+        @include tablet() {
+            font-size: 14px;
+        }
+    }
+
+}
+
+.selectedDayContainer {
+
+    background-color: $grey;
+
+    p {
+        color: #fff;
+    }
+}
+
+
+/* Foode Time Component */
+
+.foodTimeContainer {
+
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    box-shadow: 0 .2em 1em rgba($color: #666666, $alpha: .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.selectedFoodTimeContainer {
+
+    background-color: $grey;
+
+    p {
+        color: #fff;
+    }
+}
+
+
+
+
+
+
+
