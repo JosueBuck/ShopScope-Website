@@ -398,6 +398,7 @@ $wrapperWidthTabletPortait: 70%;
 
                     @include tablet-portait() {
                         width: $wrapperWidthTabletPortait;
+                        max-width: 1000px; 
                     }
 
                 }

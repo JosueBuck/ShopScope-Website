@@ -415,6 +415,7 @@ a {
 @media screen and (min-width: 840px) {
   .homePage .homePageWrapper .latestRecipesContainer .latestRecipesScrollContainer .latestRecipesScrollContent {
     width: 70%;
+    max-width: 1000px;
   }
 }
 
