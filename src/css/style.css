@@ -985,6 +985,7 @@ a {
   width: 70px;
   height: 100px;
   border-radius: 10px;
+  background-color: #fff;
   -webkit-box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
           box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
   display: -webkit-box;
@@ -1035,6 +1036,7 @@ a {
   width: 100px;
   height: 100px;
   border-radius: 12px;
+  background-color: #fff;
   -webkit-box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
           box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
   display: -webkit-box;
