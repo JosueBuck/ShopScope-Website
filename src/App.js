@@ -4,11 +4,13 @@ import ForgotPasswordPage from "./components/authentication/ForgotPassword/Forgo
 import './css/style.css';
 import RecipeWidgetComponent from "./components/recipe/RecipeWidgetComponent";
 import HomePage from "./components/general/HomePage";
+import NavigationComponent from "./components/navigation/NavigationComponent";
 
 function App() {
 
   return (
     <div className="App">
+      <NavigationComponent />
       <HomePage />
     </div>
   );

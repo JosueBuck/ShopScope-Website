@@ -2,6 +2,12 @@
 $grey: #666666;
 $backgroundColor: #F7F9FC;
 $iconSize: 15px;
+$boxShadow: 0 .2em 1em rgba($color: #666666, $alpha: .5);
+
+$wrapperWidth: 85%;
+$wrapperWidthTabletPortait: 70%;
+
+$navigationHeight: 80px;
 
 
 
@@ -296,15 +302,99 @@ a {
 
 ////////* GENERAL *////////
 
+/* Navigation */
+
+.navigationContainer {
+    
+    width: 100%;
+    height: $navigationHeight;
+    position: fixed;
+    background-color: #fff;
+    z-index: 999;
+
+    .mobileNavigationContent {
+        width: 100%;
+
+        .visibleMobileNavigationContent {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 999;
+            background-color: #fff;
+            box-shadow: 0 .08em .5em rgba($color: #666666, $alpha: .3);
+
+            .contentWrapper {
+                width: $wrapperWidth;
+                height: 100%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+
+                .burgerMenu {
+                    float: right;
+                    font-size: 30px;
+                }
+        
+                p {
+                    
+                    text-transform: uppercase;
+                    font-size: 25px;
+                    margin: 0;
+                }
+            }
+        }
+        
+        .invisibleMobileNavigationContent {
+            width: 100%;
+            height: min-content;
+            background-color: #fff;
+            position: absolute;
+            
+            transition: .8s ease-in-out;
+            z-index: 998;
+            padding-top: calc(#{$navigationHeight} + 10px);
+            text-align: center;
+            box-shadow: 0 .08em .5em rgba($color: #666666, $alpha: .3);
+
+            .navigationLinkContainer {
+                width: 80%;
+                margin: 0 auto;
+                border-bottom: 1px solid rgba($color: $grey, $alpha: .2);
+
+                p {
+                    margin: 5px 0 10px 0;
+                    font-size: 20px;
+                    font-weight: 100;
+                    text-transform: uppercase;
+                }
+    
+                .currentPage {
+                    font-weight: 400;
+                }
+    
+                .accountIcon {
+                    font-size: 30px;
+                    margin: 5px 0 10px 0;
+                }
+            }
+        }
+    }
+}
+
+
+
 /* Home Page */
 
-$wrapperWidth: 85%;
-$wrapperWidthTabletPortait: 70%;
+
 
 .homePage {
-
+    position: relative;
+    z-index: 1;
     width: 100%;
     min-height: 100vh;
+    padding-top: calc(#{$navigationHeight} + 20px);
     /* display: flex;
     flex-wrap: wrap;
     justify-content: center;  */
@@ -323,7 +413,8 @@ $wrapperWidthTabletPortait: 70%;
     .homePageWrapper {
 
         width: 100%;
-        margin: 40px 0;
+        //margin: 40px 0;
+        
     
         .welcomeContainer {
             
@@ -349,6 +440,9 @@ $wrapperWidthTabletPortait: 70%;
         .latestRecipesContainer {
     
             width: 100%;
+            //position: relative;
+            /* position: relative;
+            z-index: -1; */
 
             @include tablet() {
                 
@@ -373,9 +467,9 @@ $wrapperWidthTabletPortait: 70%;
             }
     
             .latestRecipesScrollContainer {
-    
+
                 padding-left: calc((100% - #{$wrapperWidth}) / 2);
-                overflow: scroll;
+                overflow-y: scroll;
                 scrollbar-width: none; /* For Firefox */
                 -ms-overflow-style: none; /* For Internet Explorer and Edge */
 
@@ -383,26 +477,26 @@ $wrapperWidthTabletPortait: 70%;
                     padding: 0;
                     overflow: visible;
                 }
-
+                    
                 .latestRecipesScrollContent {
-
+                        
                     display: flex;
                     width: min-content;
-
+                    position: relative;
+    
                     @include tablet() {
                         width: $wrapperWidth;
                         margin: 0 auto;
                         padding: 0;
                         justify-content: space-between;
                     }
-
+    
                     @include tablet-portait() {
                         width: $wrapperWidthTabletPortait;
                         max-width: 1000px; 
                     }
-
-                }
     
+                }
             }
         }
 

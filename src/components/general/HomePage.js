@@ -31,12 +31,11 @@ const HomePage = () => {
                     </div>
                     <div className="latestRecipesScrollContainer">
                         <div className="latestRecipesScrollContent">
-                            <RecipeWidgetComponent recipeName={'Vegetarischer Bürger'} recipeGarnishName={'mit frischen Rosmarinkartoffeln und Sour Cream'} recipePictureUrl={'https://www.malteskitchen.de/wp-content/uploads/2014/02/rindfleisch-burger-camembert-zwiebelconfit-7193.jpg'}/> 
+                            <RecipeWidgetComponent recipeName={'Vegetarischer Bürger'} recipeGarnishName={'mit frischen Rosmarinkartoffeln und Sour Cream'} recipePictureUrl={'https://www.malteskitchen.de/wp-content/uploads/2014/02/rindfleisch-burger-camembert-zwiebelconfit-7193.jpg'} />
                             <RecipeWidgetComponent />
                             <RecipeWidgetComponent />
                             <RecipeWidgetComponent />
                             <RecipeWidgetComponent />
-                            
                         </div>
                     </div>
                 </div>
