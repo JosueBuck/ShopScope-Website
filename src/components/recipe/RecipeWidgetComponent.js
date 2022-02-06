@@ -6,7 +6,7 @@ const RecipeWidgetComponent = ({recipePictureUrl, recipeName, recipeGarnishName,
 
     const widgetRecipePictureStyling = {
         backgroundImage: 'url(' + recipePictureUrl + ')',
-        backgroundSize: 'contain',
+        backgroundSize: 'cover',
     }
 
     return <div className='recipeWidgetContainer'>
