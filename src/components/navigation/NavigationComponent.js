@@ -44,6 +44,22 @@ const NavigationComponent = () => {
                 </div>
 
             </div>
+
+            <div className="navigationContent">
+                <div className="contentWrapper">
+                    <p>ShopScope</p>
+                    <div className="navigationLinks">
+                        <p>Home</p>
+                        <p className="navigationLinkSeperator">|</p>
+                        <p>Receipts</p>
+                        <p className="navigationLinkSeperator">|</p>
+                        <p>Lists</p>
+                        <p className="navigationLinkSeperator">|</p>
+                        <RiAccountCircleFill className="accountIcon" />
+                    </div>
+
+                </div>
+            </div>
         </div>
     )
 }
