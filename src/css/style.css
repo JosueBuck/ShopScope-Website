@@ -831,9 +831,7 @@ a {
 /* Day Recipe */
 .dayRecipeContainer {
   width: 100%;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  height: 60px;
   border-radius: 12px;
   background-color: #fff;
   -webkit-box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
@@ -874,6 +872,7 @@ a {
   color: #666666;
   margin: 9px 0px 9px 10px;
   width: 50%;
+  overflow: hidden;
 }
 
 .dayRecipeContainer .recipeInfo p {
@@ -891,6 +890,37 @@ a {
 .dayRecipeContainer .closeIcon {
   font-size: 20px;
   margin-right: 10px;
+}
+
+/* AddDayRecipe Component */
+.addDayRecipeContainer {
+  width: 100%;
+  height: 45px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+          box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 481px) {
+  .addDayRecipeContainer {
+    width: 80%;
+    margin: 10px auto;
+  }
+}
+
+.addDayRecipeContainer .addIcon {
+  opacity: .8;
+  font-size: 25px;
 }
 
 /* Week Component */

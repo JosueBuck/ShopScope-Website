@@ -3,6 +3,7 @@ import DayComponent from "./DayComponent";
 import FoodTimeComponent from "./FoodTimeComponent";
 import { FiChevronsUp, FiSend, FiTrash, FiEdit2 } from "react-icons/fi";
 import DayRecipe from "../recipe/DayRecipe";
+import AddDayRecipe from "../recipe/AddDayRecipeComponent";
 import WeekButtonComponent from "./WeekButtonComponent";
 
 const WeekPlanComponent = () => {
@@ -102,6 +103,7 @@ const WeekPlanComponent = () => {
                                     <DayRecipe recipeName={'testRecipe'} recipeGarnishName={'testRecipeGarnish'} />
                                     <DayRecipe recipeName={'testRecipe'} recipeGarnishName={'testRecipeGarnish'} />
                                     <DayRecipe recipeName={'testRecipe'} recipeGarnishName={'testRecipeGarnish'} />
+                                    <AddDayRecipe></AddDayRecipe>
                                 </div>
                                 : null
                         }

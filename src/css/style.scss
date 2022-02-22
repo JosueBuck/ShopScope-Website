@@ -791,7 +791,7 @@ $sizeDesktop: 19vw;
 
 .dayRecipeContainer {
     width: 100%;
-    height: min-content;
+    height: 60px;
     border-radius: 12px;
     background-color: #fff;
     box-shadow: 0 .2em 1em rgba($color: #666666, $alpha: .5);
@@ -823,6 +823,7 @@ $sizeDesktop: 19vw;
         color: $grey;
         margin: 9px 0px 9px 10px;
         width: 50%;
+        overflow: hidden;
         
         p {
             margin: 0;
@@ -840,6 +841,29 @@ $sizeDesktop: 19vw;
     .closeIcon {
         font-size: 20px;
         margin-right: 10px;
+    }
+}
+
+/* AddDayRecipe Component */
+
+.addDayRecipeContainer {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    box-shadow: 0 .2em 1em rgba($color: #666666, $alpha: .5);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet() {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .addIcon {
+        opacity: .8;
+        font-size: 25px;
     }
 }
 
