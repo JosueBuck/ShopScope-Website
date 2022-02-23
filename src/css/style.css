@@ -831,23 +831,15 @@ a {
 /* Day Recipe */
 .dayRecipeContainer {
   width: 100%;
-  height: 60px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   border-radius: 12px;
   background-color: #fff;
   -webkit-box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
           box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
   position: relative;
-  z-index: -2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: start;
+  z-index: 1;
   margin: 10px 0;
 }
 
@@ -865,31 +857,155 @@ a {
   border-radius: 12px;
   background-color: #fff;
   opacity: .8;
-  z-index: -1;
+  z-index: -2;
 }
 
-.dayRecipeContainer .recipeInfo {
+.dayRecipeContainer .receipeNormalInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: start;
+}
+
+.dayRecipeContainer .receipeNormalInfo .recipeInfo {
   color: #666666;
   margin: 9px 0px 9px 10px;
   width: 50%;
   overflow: hidden;
+  z-index: 3;
 }
 
-.dayRecipeContainer .recipeInfo p {
+.dayRecipeContainer .receipeNormalInfo .recipeInfo p {
   margin: 0;
 }
 
-.dayRecipeContainer .recipeInfo .recipeName {
+.dayRecipeContainer .receipeNormalInfo .recipeInfo .recipeName {
   font-weight: 600;
 }
 
-.dayRecipeContainer .recipeInfo .garnishName {
+.dayRecipeContainer .receipeNormalInfo .recipeInfo .garnishName {
+  max-height: 20px;
   font-size: 15px;
 }
 
-.dayRecipeContainer .closeIcon {
+.dayRecipeContainer .receipeNormalInfo .deleteIcon {
   font-size: 20px;
   margin-right: 10px;
+}
+
+.dayRecipeContainer .recipeDetailInfo {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #fff;
+  min-width: 70%;
+  max-width: 80%;
+  border-radius: 12px;
+}
+
+@media screen and (min-width: 1025px) {
+  .dayRecipeContainer .recipeDetailInfo {
+    min-width: 50%;
+  }
+}
+
+.dayRecipeContainer .recipeDetailInfo .recipeHeaderContainer {
+  height: 100%;
+  margin: 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: start;
+  position: relative;
+}
+
+.dayRecipeContainer .recipeDetailInfo .recipeHeaderContainer .recipeInfo {
+  height: 70%;
+  max-width: 70%;
+  padding-right: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.dayRecipeContainer .recipeDetailInfo .recipeHeaderContainer .recipeInfo p {
+  margin: 0;
+}
+
+.dayRecipeContainer .recipeDetailInfo .recipeHeaderContainer .recipeInfo .recipeName {
+  font-weight: 600;
+}
+
+.dayRecipeContainer .recipeDetailInfo .recipeHeaderContainer .recipeInfo .garnishName {
+  font-size: 12px;
+}
+
+.dayRecipeContainer .recipeDetailInfo .recipeHeaderContainer .closeIcon {
+  position: absolute;
+  font-size: 20px;
+  top: 20px;
+  right: 0px;
+}
+
+.dayRecipeContainer .recipeDetailInfo .recipeBodyContainer {
+  margin: 0px 20px;
+  text-align: start;
+}
+
+.dayRecipeContainer .recipeDetailInfo .recipeBodyContainer .recipeBodyTitle {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.dayRecipeContainer .recipeDetailInfo .recipeBodyContainer .ingredientsContainer {
+  width: 100%;
+}
+
+.dayRecipeContainer .recipeDetailInfo .recipeBodyContainer .ingredientsContainer .ingredientsTitel {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dayRecipeContainer .recipeDetailInfo .recipeBodyContainer .ingredientsContainer .ingredientsTitel p {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 100;
+  font-size: 12px;
+}
+
+.dayRecipeContainer .recipeDetailInfo .recipeBodyContainer .ingredientsContainer .ingedirentContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dayRecipeContainer .recipeDetailInfo .recipeBodyContainer .ingredientsContainer .ingedirentContent p {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 12px;
 }
 
 /* AddDayRecipe Component */

@@ -100,7 +100,7 @@ const WeekPlanComponent = () => {
 
                                 <div className="weekDayFoodTimeRecipeContainer">
                                     <p className="description">Recipes</p>
-                                    <DayRecipe recipeName={'testRecipe'} recipeGarnishName={'testRecipeGarnish'} />
+                                    <DayRecipe recipeName={'testRecipe'} recipeGarnishName={'testRecipeGa rnishtest RecipeGar nishtestRec ipeGa rnish'} recipePictureUrl={'https://media.istockphoto.com/photos/food-backgrounds-table-filled-with-large-variety-of-food-picture-id1155240408?k=20&m=1155240408&s=612x612&w=0&h=Zvr3TwVQ-wlfBnvGrgJCtv-_P_LUcIK301rCygnirbk='}/>
                                     <DayRecipe recipeName={'testRecipe'} recipeGarnishName={'testRecipeGarnish'} />
                                     <DayRecipe recipeName={'testRecipe'} recipeGarnishName={'testRecipeGarnish'} />
                                     <AddDayRecipe></AddDayRecipe>
