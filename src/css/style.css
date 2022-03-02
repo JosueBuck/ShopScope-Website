@@ -13,6 +13,10 @@ a {
   font-weight: bold;
 }
 
+p {
+  margin: 0;
+}
+
 /* Login & Register & Forgot Password */
 .loginPage, .registerPage, .forgotPasswordPage {
   width: 100%;
@@ -692,12 +696,341 @@ a {
   font-size: 12px;
 }
 
+/* Recipe Page */
+.recipePage {
+  width: 100%;
+  padding-top: calc(80px + 20px);
+}
+
+.recipePage .recipePageWrapper {
+  margin: 0 auto;
+}
+
+.recipePage .recipePageWrapper .filterSettingsContainer {
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.recipePage .recipePageWrapper .filterSettingsContainer .filterTitle {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 481px) {
+  .recipePage .recipePageWrapper .filterSettingsContainer .filterTitle {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .recipePage .recipePageWrapper .filterSettingsContainer .filterDescription {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+.recipePage .recipePageWrapper .filterSettingsContainer .filterButtonContainer {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 65vh;
+  overflow: scroll;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer and Edge */
+}
+
+@media screen and (min-width: 481px) {
+  .recipePage .recipePageWrapper .filterSettingsContainer .filterButtonContainer {
+    width: calc(85% * 0.8);
+    margin: 0 auto;
+  }
+}
+
+.recipePage .recipePageWrapper .filterSettingsContainer .filterButtonContainer::-webkit-scrollbar {
+  width: 0px;
+  /* For Chrome, Safari, and Opera */
+}
+
+.recipePage .recipePageWrapper .filterSettingsContainer .closeIcon {
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.recipePage .recipePageWrapper .filterSettingsContainer .resetButtonContainer {
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: calc(45px / 2);
+  background-color: #666666;
+  margin: 10px;
+  position: absolute;
+  right: 0;
+  top: 50vh;
+}
+
+@media screen and (min-width: 481px) {
+  .recipePage .recipePageWrapper .filterSettingsContainer .resetButtonContainer {
+    border-radius: calc(55px / 2);
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.recipePage .recipePageWrapper .filterSettingsContainer .resetButtonContainer .resetIcon {
+  font-size: 20px;
+  stroke: #fff;
+}
+
+.recipePage .recipePageWrapper .filterSettingsContainer .activateButtonContainer {
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: calc(45px / 2);
+  background-color: #666666;
+  margin: 10px;
+  position: absolute;
+  right: 0;
+  top: 58vh;
+}
+
+@media screen and (min-width: 481px) {
+  .recipePage .recipePageWrapper .filterSettingsContainer .activateButtonContainer {
+    border-radius: calc(55px / 2);
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.recipePage .recipePageWrapper .filterSettingsContainer .activateButtonContainer .activateIcon {
+  font-size: 20px;
+  stroke: #fff;
+}
+
+.recipePage .recipePageWrapper .pageTitle {
+  font-size: 2rem;
+  width: 85%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 481px) {
+  .recipePage .recipePageWrapper .pageTitle {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+.recipePage .recipePageWrapper .searchContainer {
+  width: 85%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 481px) {
+  .recipePage .recipePageWrapper .searchContainer {
+    width: calc(85% / 2.5);
+  }
+}
+
+.recipePage .recipePageWrapper .searchContainer .search {
+  width: 85%;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+          box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recipePage .recipePageWrapper .searchContainer .search input {
+  border-radius: 20px;
+  border: 0;
+  width: 80%;
+}
+
+.recipePage .recipePageWrapper .searchContainer .search input:focus {
+  outline: none;
+}
+
+.recipePage .recipePageWrapper .searchContainer .filterIconContainer {
+  background-color: #fff;
+  border-radius: 25px;
+  height: 30px;
+  width: 30px;
+  -webkit-box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+          box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recipePage .recipePageWrapper .recipesScrollContainer {
+  width: 100%;
+  height: 55vh;
+  overflow: scroll;
+  margin: 20px auto;
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer and Edge */
+}
+
+@media screen and (min-width: 481px) {
+  .recipePage .recipePageWrapper .recipesScrollContainer {
+    padding: 20px;
+    width: calc(85%);
+    height: 70vh;
+  }
+  .recipePage .recipePageWrapper .recipesScrollContainer .recipeWidgetContainer {
+    margin: 10px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .recipePage .recipePageWrapper .recipesScrollContainer {
+    height: 60vh;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .recipePage .recipePageWrapper .recipesScrollContainer {
+    width: calc(85% * 0.8);
+  }
+}
+
+.recipePage .recipePageWrapper .recipesScrollContainer .recipesScrollContent {
+  overflow: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.recipePage .recipePageWrapper .recipesScrollContainer::-webkit-scrollbar {
+  width: 0px;
+  /* For Chrome, Safari, and Opera */
+}
+
+.recipePage .recipePageWrapper .quoteContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.recipePage .recipePageWrapper .quoteContainer p {
+  font-size: 12px;
+  opacity: .5;
+}
+
+.recipePage .recipePageWrapper .quoteContainer .horizontalLine {
+  width: 10%;
+  height: 1px;
+  background-color: #666666;
+  opacity: .3;
+}
+
+/* Recipe Filter Button */
+.filterButton {
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.1em 0.6em rgba(102, 102, 102, 0.4);
+          box-shadow: 0 0.1em 0.6em rgba(102, 102, 102, 0.4);
+  border-radius: 15px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.selectedFilterButton {
+  background-color: #666666;
+}
+
+.selectedFilterButton p {
+  color: #fff;
+}
+
 /* Recipe Widget */
 .recipeWidgetContainer {
-  width: calc(250px - (250px * 0.3));
-  height: 250px;
-  margin: 10px 10px 20px 0px;
-  border-radius: calc(250px / 15);
+  width: calc(200px - (200px * 0.3));
+  height: 200px;
+  margin: 10px 10px 20px 10px;
+  border-radius: calc(200px / 15);
   -webkit-box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
           box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
   background-color: #fff;
@@ -717,16 +1050,16 @@ a {
 @media screen and (min-width: 1025px) {
   .recipeWidgetContainer {
     width: calc(19vw - (19vw * 0.3));
-    max-width: calc(250px - (250px * 0.3));
+    max-width: calc(200px - (200px * 0.3));
     height: 19vw;
-    max-height: 250px;
+    max-height: 200px;
     border-radius: calc(19vw / 20);
   }
 }
 
 .recipeWidgetContainer .recipeWidgetPicture {
   height: 45%;
-  border-radius: calc(250px / 15);
+  border-radius: calc(200px / 15);
   background-color: #666666;
 }
 
@@ -763,7 +1096,7 @@ a {
 .recipeWidgetContainer .recipeWidgetInfoContainer .recipeWidgetNameContainer .recipeName {
   width: 80%;
   font-weight: 600;
-  font-size: calc(250px / 16.5);
+  font-size: calc(200px / 16.5);
   margin: 0;
 }
 
@@ -780,7 +1113,7 @@ a {
 }
 
 .recipeWidgetContainer .recipeWidgetInfoContainer .recipeWidgetNameContainer .recipeGarnishName {
-  font-size: calc(250px / 21);
+  font-size: calc(200px / 21);
   margin: 0;
 }
 
@@ -815,8 +1148,8 @@ a {
 }
 
 .recipeWidgetContainer .recipeWidgetInfoContainer .recipeWidgetInfoIconsContainer .cookingTimeContainer .cookingTimeIcon {
-  width: calc(250px / 12);
-  height: calc(250px / 12);
+  width: calc(200px / 12);
+  height: calc(200px / 12);
 }
 
 .recipeWidgetContainer .recipeWidgetInfoContainer .recipeWidgetInfoIconsContainer .cookingTimeContainer .passive {
@@ -824,8 +1157,8 @@ a {
 }
 
 .recipeWidgetContainer .recipeWidgetInfoContainer .recipeWidgetInfoIconsContainer .recipeTypeContainer .recipeTypeIcon {
-  width: calc(250px / 12);
-  height: calc(250px / 12);
+  width: calc(200px / 12);
+  height: calc(200px / 12);
 }
 
 /* Day Recipe */
