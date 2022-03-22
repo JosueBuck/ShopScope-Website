@@ -3,7 +3,7 @@ $grey: #666666;
 $backgroundColor: #F7F9FC;
 $iconSize: 15px;
 $boxShadow: 0 .2em 1em rgba($color: #666666, $alpha: .5);
-
+$lightBoxShadow: 0 .2em .5em rgba($color: #666666, $alpha: .4);
 $wrapperWidth: 85%;
 $wrapperWidthTabletPortait: 70%;
 
@@ -181,6 +181,10 @@ p {
             outline: none;
         }
 
+        &::placeholder {
+            opacity: .5;
+        }
+
         @include tablet {
             line-height: 3em;
             height: 3em; 
@@ -193,9 +197,7 @@ p {
             font-size: 1.2em;
         }
 
-        &::placeholder {
-            opacity: .5;
-        } 
+         
     }
 
     .icon {
@@ -659,16 +661,677 @@ p {
 
 ////////* RECIPES *////////
 
-
-
 /* Recipe Page */
-
+$recipePictureHeight: 30vh;
+$sectionMargin: 30px 0;
+$recipeNameContainerHeight: 9vh;
 .recipePage {
+    
+    width: 100%;
+    //min-height: fit-content;
+    position: relative;
+
+    input {
+
+        height: 20px;
+        border: none;
+        border-bottom: rgba($color: #666666, $alpha: .3) 1px solid;
+
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            opacity: .5;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        height: fit-content;
+        border: none;
+        margin-top: 10px;
+        border-bottom: rgba($color: #666666, $alpha: .3) 1px solid;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .recipePictureContainer {
+        width: 100%;
+        height: $recipePictureHeight;
+        position: fixed;
+        padding-top: $navigationHeight;
+        z-index: 1;
+
+        @include desktop() {
+            position: relative;
+            padding: 0;
+        }
+    }
+
+    .recipeContentContainer {
+        width: 100%;
+        height: max-content;
+        min-height: calc(100vh - (#{$navigationHeight} + (#{$recipePictureHeight} * 0.8)));
+        border-radius: 30px;
+        position: absolute;
+        background-color: #fff;
+        margin-top: calc(#{$navigationHeight} + (#{$recipePictureHeight} * 0.8));
+        z-index: 2;
+
+        @include desktop() {
+            position: relative;
+            margin: 0;   
+            border-radius: 0;
+            background-color: #F7F9FC;
+        }
+
+        .recipeContentWrapper {
+            width: 85%;
+            margin: 25px auto;
+
+            @include desktop() {
+                margin: 0 auto;   
+            }
+
+            /* Generell Css */
+
+            .recipeSubheading {
+                font-weight: 600;
+            }
+            
+            .recipeNormalText {
+                font-size: 14px;
+            }
+
+            .recipeHeader {
+
+                @include desktop() {
+                    position: absolute;  
+                    //top: -48.5px;
+                    top: calc(( #{$recipeNameContainerHeight} / -2 ) - 5px); //hidden scrollbar in type container has a total height of 10 px -> take half to center it!
+                    left: 0;
+                    display: flex;
+                }
+
+                .recipeHeaderFlexContainer {
+
+                    display: flex;
+                    justify-content: space-between;
+
+                    .recipeNameContainer {
+
+                        width: 70%;
+                        display: flex;
+                        overflow: hidden;
+                        align-items: center;
+                        
+                        @include tablet() {
+                            width: 80%;
+                        }
+
+                        @include tablet-portait() {
+                            width: 85%;
+                        }
+
+                        @include desktop() {
+                            background-color: #fff;
+                            width: 33vw;
+                            height: $recipeNameContainerHeight;
+                            padding-left: 7.5vw;
+                            padding-top: 10px;
+                            //padding-bottom: 10px;
+                            border-top-right-radius: $recipeNameContainerHeight;
+                            border-bottom-right-radius: $recipeNameContainerHeight;
+                            box-shadow: $boxShadow;
+                        }
+
+                        .recipeNameEditView {
+
+                            width: 100%;
+                            height: 100%;
+                            margin-bottom: 10px;
+
+                            .editRecipeNameNormalView {
+
+                                @include desktop() {
+                                    display: none;
+                                }
+                            }
+    
+                            .editRecipeNameDesktopView {
+                                
+                                width: 100%;
+                                height: 100%;
+                                display: none;
+    
+                                @include desktop() {
+                                    display: block;
+                                }
+    
+                                .editRecipeNameFlexContainer {
+                                    height: 50%;
+                                    display: flex;
+                                    align-items: center;
+    
+                                    p {
+                                        width: 40%;
+                                    }
+
+                                    input {
+                                        width: 45%;
+                                    }
+                                }
+                            }
+                        }
+
+                        
+    
+                        .recipeName {
+                            font-size: 18px;
+                            font-weight: 600;
+
+                            @include tablet() {
+                                font-size: 20px;
+                                font-weight: 600;
+                            }
+                        }
+
+                        .garnishName {
+
+                            @include tablet() {
+                                font-size: 17px;
+                            }
+                        }
+
+                        .recipeTypeContainer {
+                            margin: 0;
+                            padding: 0;
+                            width: 100%;
+                            overflow: scroll;
+                            display: flex;
+                            scrollbar-width: none; /* For Firefox */
+                            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+
+                            @include desktop() {
+                                width: 70%;
+                            }
+        
+                            .recipeType {
+                                
+                                font-size: 10px;
+                                font-weight: 200;
+                                margin-right: 10px;
+        
+                                @include tablet() {
+                                    font-size: 12px;
+                                    font-weight: 200;
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+
+                        .recipeTypeContainer::-webkit-scrollbar {
+                            width: 0px; /* For Chrome, Safari, and Opera */
+                        }
+    
+                    }
+                    
+                    .recipeButtons {
+
+                        display: flex;
+                        
+                        @include desktop() {
+                            //display: block;
+                            position: absolute;
+                            right: -59vw;
+                            top: calc( -1 * (#{$recipePictureHeight} - #{$navigationHeight}) * 0.65 )
+                        }
+
+                        .recipePageIcon {
+                            font-size: 25px;
+                            transform: rotate(90deg);
+
+                            @include desktop() {
+                                font-size: 22px;
+                            }
+                        }
+    
+                        $recipeBageButtonSize: 5.5vh;
+                        .changeRecipeButton, .exitRecipePageButton{
+
+                            margin-left: 15px;
+
+                            @include desktop() {
+                                width: $recipeBageButtonSize;
+                                max-width: 50px;
+                                height: $recipeBageButtonSize;
+                                max-height: 50px;
+                                border-radius: calc(#{$recipeBageButtonSize} / 2);
+                                background-color: #fff;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                box-shadow: $boxShadow;
+                                margin: 0 10px;
+                            }
+                        }
+                    }
+
+                    .exitEditViewButton {
+                        @include desktop() {
+                            //display: block;
+                            right: -39vw;
+                        }
+                    }
+                }
+
+                .editRecipeTypeDesktopView {
+                    width: 100%;
+                    display: none;
+
+                    @include desktop() {
+                        display: block;
+                    }
+                }
+
+            }
+
+            .recipeInfoSection {
+                display: flex;
+                justify-content: space-around;
+                margin: $sectionMargin;
+
+                @include desktop() {
+                    margin: 0 auto; 
+                    width: 20%;
+                    position: absolute;
+                    right: 5vw;
+                    top: calc(#{$recipeNameContainerHeight} / -2);
+                    z-index: 2;  
+                }
+            }
+
+            $sectionsPadding: 4.5vh;
+            .changeRecipeInfoSection {
+
+                width: 100%;
+
+                
+
+                .editSmallScreenView {
+
+                    @include tablet() {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        //padding-top: $sectionsPadding;
+                    } 
+    
+                    @include desktop() {
+                        display: none;
+                    }
+                    width: 100%;
+
+                    .changeRecipeInfoInputContainer {
+                        width: 100%;
+                        margin: 40px 0;
+    
+                        @include tablet() {
+                            width: 45%;
+                        }                    
+    
+                        input {
+                            margin-top: 10px;
+                            width: 60%;
+    
+                            @include tablet() {
+                                width: 90%;
+                            } 
+                        }
+    
+                    }
+                }
+
+                
+                
+            }
+
+            .recipeMainSection {
+                $sectionWidth: 28%;
+                $sectionMaxHeight: 55vh;
+                $sectionParagraphMaxHeight: 50vh;
+                $sectionInnerPadding: 1.8%;
+                $borderRadius: 25px;
+                $addRecipeButtonHeight: 35px;
+
+                @include desktop() {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: $sectionsPadding;
+                }
+
+                .recipeAboutSection {
+
+                    margin: $sectionMargin;
+                    text-align: justify;
+
+                    @include desktop() {
+                        width: $sectionWidth;
+                        height: fit-content;
+                        max-height: $sectionMaxHeight;
+                        background-color: #fff;
+                        padding: $sectionInnerPadding;
+                        box-shadow: $boxShadow;
+                        border-radius: $borderRadius;
+                        
+                    }
+
+                    .recipeNormalText {
+
+                        @include desktop() {
+                            max-height: $sectionParagraphMaxHeight;
+                            overflow: scroll;
+
+                            scrollbar-width: none; /* For Firefox */
+                            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+                        }
+                        
+                    }
+
+                    .recipeNormalText::-webkit-scrollbar {
+                        width: 0px; /* For Chrome, Safari, and Opera */
+                    }
+                }
+
+                
+    
+                .recipeIngredientsSection {
+    
+                    margin: $sectionMargin;
+
+                    @include desktop() {
+                        width: $sectionWidth;
+                        height: fit-content;
+                        max-height: $sectionMaxHeight;
+                        background-color: #fff;
+                        padding: $sectionInnerPadding;
+                        box-shadow: $boxShadow;
+                        border-radius: $borderRadius;
+                    }
+
+                    .recipeIngredientsContainer {
+
+                        @include desktop() {
+                            max-height: calc(#{$sectionParagraphMaxHeight} - #{$addRecipeButtonHeight});
+                            overflow: scroll;
+
+                            scrollbar-width: none; /* For Firefox */
+                            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+                        }
+                        
+                    }
+
+                    .recipeIngredientsContainer::-webkit-scrollbar {
+                        width: 0px; /* For Chrome, Safari, and Opera */
+                    }
+    
+                    .addRecipeButton {
+                        width: 35%;
+                        margin: 0 auto;
+                        box-shadow: $boxShadow;
+                        height: $addRecipeButtonHeight;
+                        border-radius: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        p {
+                            font-size: 14px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+    
+                .recipeInstructionsSection {
+                    margin: $sectionMargin;
+                    text-align: justify;
+
+                    @include desktop() {
+                        width: $sectionWidth;
+                        height: fit-content;
+                        max-height: $sectionMaxHeight;
+                        background-color: #fff;
+                        padding: $sectionInnerPadding;
+                        box-shadow: $boxShadow;
+                        border-radius: $borderRadius;
+                        
+                    }
+
+                    .recipeNormalText {
+                        @include desktop() {
+                            max-height: $sectionParagraphMaxHeight;
+                            overflow: scroll;
+
+                            scrollbar-width: none; /* For Firefox */
+                            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+                        }
+                    }
+
+                    .recipeNormalText::-webkit-scrollbar {
+                        width: 0px; /* For Chrome, Safari, and Opera */
+                    }
+                }
+
+                
+            }
+
+            
+        }
+    }
+}
+
+/* Recipe Info Component */
+$recipeInfoContainerSize: 50px;
+$recipeInfoDesktopContainerSize: 70px;
+.recipeInfoComponent {
+
+    text-align: center;
+    width: fit-content;
+
+    .recipeInfoValueContainer {
+
+        width: $recipeInfoContainerSize;
+        height: $recipeInfoContainerSize;
+        border-radius:  calc(#{$recipeInfoContainerSize} / 2);
+        background-color: #fff;
+        box-shadow: $boxShadow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        @include tablet() {
+            width: calc(#{$recipeInfoContainerSize} * 2);
+            height: calc(#{$recipeInfoContainerSize} * 2);
+            border-radius:  calc((#{$recipeInfoContainerSize} * 2) / 2);
+        }
+
+        @include desktop() {
+            width: $recipeInfoDesktopContainerSize;
+            height: $recipeInfoDesktopContainerSize;
+            border-radius:  calc(#{$recipeInfoDesktopContainerSize} / 2);
+        }
+
+        .recipeInfoValue {
+            font-weight: 600;
+
+            @include tablet() {
+                font-size: 20px;
+            }
+
+            @include desktop() {
+                font-size: 18px;
+            }
+        }
+
+    }
+
+    .recipeInfoName {
+        padding: 5px 0px;
+        font-size: 12px;
+
+        @include tablet() {
+            font-size: 15px;
+        }
+
+        @include desktop() {
+            font-size: 12px;
+        }
+    }
+}
+
+/* Recipe Ingredient Component */
+$addButtonSize:23px;
+.recipeIngredientComponent {
+
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+
+    input {
+        width: 100%;
+    }
+
+    /* Generell CSS */
+
+    .recipeIngredientParagraph {
+        font-size: 14px;
+    }
+
+    .ingredientNameContainer {
+
+        width: 40%;
+        text-align: left;
+        
+    }
+
+    .ingredientAmountContainer {
+
+        width: 20%;
+        text-align: center;
+    }
+
+    .recipeIngredientButton {
+
+        width: $addButtonSize;
+        height: $addButtonSize;
+        box-shadow: $boxShadow;
+        border-radius: calc(#{$addButtonSize} / 2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+}
+
+
+$smallRecipeTypeContainerSize: 10px;
+/* Recipe Type Container Component */
+.editRecipeTypesContainer {
+    
+
+    @include desktop() {
+        width: 20vw;
+        max-width: 500px;
+    }
+
+
+    .editRecipeFlexBox {
+
+        display: flex;
+        justify-content: space-between;
+        ///width: 50%;
+
+        .editRecipeTypes {
+            display: flex;
+            width: 80%;
+            overflow: scroll;
+
+            scrollbar-width: none; /* For Firefox */
+            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+        }
+
+        .editRecipeTypes::-webkit-scrollbar {
+            width: 0px; /* For Chrome, Safari, and Opera */
+        }
+
+        .addRecipeTypeButton {
+            //width: fit-content;
+            //width: ;
+            background-color: #fff;
+            padding: $smallRecipeTypeContainerSize;
+            margin: $smallRecipeTypeContainerSize;
+            border-radius: calc(#{$smallRecipeTypeContainerSize} * 5);
+            box-shadow: $lightBoxShadow;
+
+            @include desktop() {
+                padding: $smallRecipeTypeContainerSize;
+                margin-bottom: calc(#{$smallRecipeTypeContainerSize} / 2);
+                margin-top: calc(#{$smallRecipeTypeContainerSize} / 2);
+            }
+        }
+    }
+
+    .allTypesContainer {
+        //width: 50%;
+        display: flex;
+        overflow: scroll;
+        border-top: 1px dotted rgba($color: #666666, $alpha: .3);
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    }
+
+    .allTypesContainer::-webkit-scrollbar {
+        width: 0px; /* For Chrome, Safari, and Opera */
+    }
+    
+}
+
+
+/* Recipe Type Component */
+.editRecipeTypeContainer {
+    width: fit-content;
+    font-size: 12px;
+    padding: $smallRecipeTypeContainerSize;
+    margin: $smallRecipeTypeContainerSize;
+    border-radius: calc(#{$smallRecipeTypeContainerSize} * 5);
+    box-shadow: $lightBoxShadow;
+    background-color: #fff;
+
+    @include desktop() {
+        margin-bottom: calc(#{$smallRecipeTypeContainerSize} / 2);
+        margin-top: calc(#{$smallRecipeTypeContainerSize} / 2);
+    }
+}
+
+
+/* Recipe Overview Page */
+
+.recipeOverviewPage {
 
     width: 100%;
     padding-top: calc(#{$navigationHeight} + 20px);
 
-    .recipePageWrapper {
+    .recipeOverviewPageWrapper {
         //width: $wrapperWidth;
         margin: 0 auto;
         //padding-left: calc((100% - #{$wrapperWidth}) / 2);
@@ -1476,10 +2139,4 @@ $sizeDesktop: 19vw;
         color: #fff;
     }
 }
-
-
-
-
-
-
 

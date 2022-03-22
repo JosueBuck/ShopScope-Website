@@ -5,6 +5,7 @@ import './css/style.css';
 import RecipeWidgetComponent from "./components/recipe/RecipeWidgetComponent";
 import HomePage from "./components/general/HomePage";
 import NavigationComponent from "./components/navigation/NavigationComponent";
+import RecipeOverviewPage from "./components/recipe/RecipeOverviewPage";
 import RecipePage from "./components/recipe/RecipePage";
 
 function App() {
