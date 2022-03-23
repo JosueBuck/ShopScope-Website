@@ -696,6 +696,7 @@ p {
   font-size: 12px;
 }
 
+/* List Overview Page */
 /* Recipe Page */
 .recipePage {
   width: 100%;
@@ -1455,27 +1456,27 @@ p {
 }
 
 /* Recipe Overview Page */
-.recipeOverviewPage {
+.recipeOverviewPage, .listOverviewPage {
   width: 100%;
   padding-top: calc(80px + 20px);
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper {
+.recipeOverviewPage .recipeOverviewPageWrapper, .recipeOverviewPage .listOverviewPageWrapper, .listOverviewPage .recipeOverviewPageWrapper, .listOverviewPage .listOverviewPageWrapper {
   margin: 0 auto;
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer {
+.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer, .recipeOverviewPage .listOverviewPageWrapper .filterSettingsContainer, .listOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer, .listOverviewPage .listOverviewPageWrapper .filterSettingsContainer {
   width: 85%;
   margin: 0 auto;
   position: relative;
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterTitle {
+.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterTitle, .recipeOverviewPage .listOverviewPageWrapper .filterSettingsContainer .filterTitle, .listOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterTitle, .listOverviewPage .listOverviewPageWrapper .filterSettingsContainer .filterTitle {
   font-size: 2rem;
 }
 
 @media screen and (min-width: 481px) {
-  .recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterTitle {
+  .recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterTitle, .recipeOverviewPage .listOverviewPageWrapper .filterSettingsContainer .filterTitle, .listOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterTitle, .listOverviewPage .listOverviewPageWrapper .filterSettingsContainer .filterTitle {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -1484,7 +1485,7 @@ p {
 }
 
 @media screen and (min-width: 481px) {
-  .recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterDescription {
+  .recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterDescription, .recipeOverviewPage .listOverviewPageWrapper .filterSettingsContainer .filterDescription, .listOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterDescription, .listOverviewPage .listOverviewPageWrapper .filterSettingsContainer .filterDescription {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -1492,7 +1493,7 @@ p {
   }
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterButtonContainer {
+.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterButtonContainer, .recipeOverviewPage .listOverviewPageWrapper .filterSettingsContainer .filterButtonContainer, .listOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterButtonContainer, .listOverviewPage .listOverviewPageWrapper .filterSettingsContainer .filterButtonContainer {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -1514,25 +1515,25 @@ p {
 }
 
 @media screen and (min-width: 481px) {
-  .recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterButtonContainer {
+  .recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterButtonContainer, .recipeOverviewPage .listOverviewPageWrapper .filterSettingsContainer .filterButtonContainer, .listOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterButtonContainer, .listOverviewPage .listOverviewPageWrapper .filterSettingsContainer .filterButtonContainer {
     width: calc(85% * 0.8);
     margin: 0 auto;
   }
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterButtonContainer::-webkit-scrollbar {
+.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterButtonContainer::-webkit-scrollbar, .recipeOverviewPage .listOverviewPageWrapper .filterSettingsContainer .filterButtonContainer::-webkit-scrollbar, .listOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .filterButtonContainer::-webkit-scrollbar, .listOverviewPage .listOverviewPageWrapper .filterSettingsContainer .filterButtonContainer::-webkit-scrollbar {
   width: 0px;
   /* For Chrome, Safari, and Opera */
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .closeIcon {
+.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .closeIcon, .recipeOverviewPage .listOverviewPageWrapper .filterSettingsContainer .closeIcon, .listOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .closeIcon, .listOverviewPage .listOverviewPageWrapper .filterSettingsContainer .closeIcon {
   font-size: 30px;
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .resetButtonContainer {
+.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .resetButtonContainer, .recipeOverviewPage .listOverviewPageWrapper .filterSettingsContainer .resetButtonContainer, .listOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .resetButtonContainer, .listOverviewPage .listOverviewPageWrapper .filterSettingsContainer .resetButtonContainer {
   width: 45px;
   height: 45px;
   display: -webkit-box;
@@ -1553,19 +1554,19 @@ p {
 }
 
 @media screen and (min-width: 481px) {
-  .recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .resetButtonContainer {
+  .recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .resetButtonContainer, .recipeOverviewPage .listOverviewPageWrapper .filterSettingsContainer .resetButtonContainer, .listOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .resetButtonContainer, .listOverviewPage .listOverviewPageWrapper .filterSettingsContainer .resetButtonContainer {
     border-radius: calc(55px / 2);
     width: 55px;
     height: 55px;
   }
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .resetButtonContainer .resetIcon {
+.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .resetButtonContainer .resetIcon, .recipeOverviewPage .listOverviewPageWrapper .filterSettingsContainer .resetButtonContainer .resetIcon, .listOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .resetButtonContainer .resetIcon, .listOverviewPage .listOverviewPageWrapper .filterSettingsContainer .resetButtonContainer .resetIcon {
   font-size: 20px;
   stroke: #fff;
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .activateButtonContainer {
+.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .activateButtonContainer, .recipeOverviewPage .listOverviewPageWrapper .filterSettingsContainer .activateButtonContainer, .listOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .activateButtonContainer, .listOverviewPage .listOverviewPageWrapper .filterSettingsContainer .activateButtonContainer {
   width: 45px;
   height: 45px;
   display: -webkit-box;
@@ -1586,33 +1587,33 @@ p {
 }
 
 @media screen and (min-width: 481px) {
-  .recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .activateButtonContainer {
+  .recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .activateButtonContainer, .recipeOverviewPage .listOverviewPageWrapper .filterSettingsContainer .activateButtonContainer, .listOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .activateButtonContainer, .listOverviewPage .listOverviewPageWrapper .filterSettingsContainer .activateButtonContainer {
     border-radius: calc(55px / 2);
     width: 55px;
     height: 55px;
   }
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .activateButtonContainer .activateIcon {
+.recipeOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .activateButtonContainer .activateIcon, .recipeOverviewPage .listOverviewPageWrapper .filterSettingsContainer .activateButtonContainer .activateIcon, .listOverviewPage .recipeOverviewPageWrapper .filterSettingsContainer .activateButtonContainer .activateIcon, .listOverviewPage .listOverviewPageWrapper .filterSettingsContainer .activateButtonContainer .activateIcon {
   font-size: 20px;
   stroke: #fff;
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .pageTitle {
+.recipeOverviewPage .recipeOverviewPageWrapper .pageTitle, .recipeOverviewPage .listOverviewPageWrapper .pageTitle, .listOverviewPage .recipeOverviewPageWrapper .pageTitle, .listOverviewPage .listOverviewPageWrapper .pageTitle {
   font-size: 2rem;
   width: 85%;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 481px) {
-  .recipeOverviewPage .recipeOverviewPageWrapper .pageTitle {
+  .recipeOverviewPage .recipeOverviewPageWrapper .pageTitle, .recipeOverviewPage .listOverviewPageWrapper .pageTitle, .listOverviewPage .recipeOverviewPageWrapper .pageTitle, .listOverviewPage .listOverviewPageWrapper .pageTitle {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .searchContainer {
+.recipeOverviewPage .recipeOverviewPageWrapper .searchContainer, .recipeOverviewPage .listOverviewPageWrapper .searchContainer, .listOverviewPage .recipeOverviewPageWrapper .searchContainer, .listOverviewPage .listOverviewPageWrapper .searchContainer {
   width: 85%;
   margin: 0 auto;
   display: -webkit-box;
@@ -1627,12 +1628,22 @@ p {
 }
 
 @media screen and (min-width: 481px) {
-  .recipeOverviewPage .recipeOverviewPageWrapper .searchContainer {
+  .recipeOverviewPage .recipeOverviewPageWrapper .searchContainer, .recipeOverviewPage .listOverviewPageWrapper .searchContainer, .listOverviewPage .recipeOverviewPageWrapper .searchContainer, .listOverviewPage .listOverviewPageWrapper .searchContainer {
     width: calc(85% / 2.5);
   }
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .searchContainer .search {
+.recipeOverviewPage .recipeOverviewPageWrapper .searchContainer input, .recipeOverviewPage .listOverviewPageWrapper .searchContainer input, .listOverviewPage .recipeOverviewPageWrapper .searchContainer input, .listOverviewPage .listOverviewPageWrapper .searchContainer input {
+  border-radius: 20px;
+  border: 0;
+  width: 80%;
+}
+
+.recipeOverviewPage .recipeOverviewPageWrapper .searchContainer input:focus, .recipeOverviewPage .listOverviewPageWrapper .searchContainer input:focus, .listOverviewPage .recipeOverviewPageWrapper .searchContainer input:focus, .listOverviewPage .listOverviewPageWrapper .searchContainer input:focus {
+  outline: none;
+}
+
+.recipeOverviewPage .recipeOverviewPageWrapper .searchContainer .search, .recipeOverviewPage .listOverviewPageWrapper .searchContainer .search, .listOverviewPage .recipeOverviewPageWrapper .searchContainer .search, .listOverviewPage .listOverviewPageWrapper .searchContainer .search {
   width: 85%;
   height: 30px;
   background-color: #fff;
@@ -1649,17 +1660,11 @@ p {
           align-items: center;
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .searchContainer .search input {
-  border-radius: 20px;
-  border: 0;
-  width: 80%;
+.recipeOverviewPage .recipeOverviewPageWrapper .searchContainer .searchWide, .recipeOverviewPage .listOverviewPageWrapper .searchContainer .searchWide, .listOverviewPage .recipeOverviewPageWrapper .searchContainer .searchWide, .listOverviewPage .listOverviewPageWrapper .searchContainer .searchWide {
+  width: 100%;
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .searchContainer .search input:focus {
-  outline: none;
-}
-
-.recipeOverviewPage .recipeOverviewPageWrapper .searchContainer .filterIconContainer {
+.recipeOverviewPage .recipeOverviewPageWrapper .searchContainer .filterIconContainer, .recipeOverviewPage .listOverviewPageWrapper .searchContainer .filterIconContainer, .listOverviewPage .recipeOverviewPageWrapper .searchContainer .filterIconContainer, .listOverviewPage .listOverviewPageWrapper .searchContainer .filterIconContainer {
   background-color: #fff;
   border-radius: 25px;
   height: 30px;
@@ -1677,7 +1682,7 @@ p {
           align-items: center;
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer {
+.recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer, .recipeOverviewPage .recipeOverviewPageWrapper .listsScrollContainer, .recipeOverviewPage .listOverviewPageWrapper .recipesScrollContainer, .recipeOverviewPage .listOverviewPageWrapper .listsScrollContainer, .listOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer, .listOverviewPage .recipeOverviewPageWrapper .listsScrollContainer, .listOverviewPage .listOverviewPageWrapper .recipesScrollContainer, .listOverviewPage .listOverviewPageWrapper .listsScrollContainer {
   width: 100%;
   height: 55vh;
   overflow: scroll;
@@ -1689,29 +1694,29 @@ p {
 }
 
 @media screen and (min-width: 481px) {
-  .recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer {
+  .recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer, .recipeOverviewPage .recipeOverviewPageWrapper .listsScrollContainer, .recipeOverviewPage .listOverviewPageWrapper .recipesScrollContainer, .recipeOverviewPage .listOverviewPageWrapper .listsScrollContainer, .listOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer, .listOverviewPage .recipeOverviewPageWrapper .listsScrollContainer, .listOverviewPage .listOverviewPageWrapper .recipesScrollContainer, .listOverviewPage .listOverviewPageWrapper .listsScrollContainer {
     padding: 20px;
     width: calc(85%);
     height: 70vh;
   }
-  .recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer .recipeWidgetContainer {
+  .recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer .recipeWidgetContainer, .recipeOverviewPage .recipeOverviewPageWrapper .listsScrollContainer .recipeWidgetContainer, .recipeOverviewPage .listOverviewPageWrapper .recipesScrollContainer .recipeWidgetContainer, .recipeOverviewPage .listOverviewPageWrapper .listsScrollContainer .recipeWidgetContainer, .listOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer .recipeWidgetContainer, .listOverviewPage .recipeOverviewPageWrapper .listsScrollContainer .recipeWidgetContainer, .listOverviewPage .listOverviewPageWrapper .recipesScrollContainer .recipeWidgetContainer, .listOverviewPage .listOverviewPageWrapper .listsScrollContainer .recipeWidgetContainer {
     margin: 10px;
   }
 }
 
 @media screen and (min-width: 840px) {
-  .recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer {
+  .recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer, .recipeOverviewPage .recipeOverviewPageWrapper .listsScrollContainer, .recipeOverviewPage .listOverviewPageWrapper .recipesScrollContainer, .recipeOverviewPage .listOverviewPageWrapper .listsScrollContainer, .listOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer, .listOverviewPage .recipeOverviewPageWrapper .listsScrollContainer, .listOverviewPage .listOverviewPageWrapper .recipesScrollContainer, .listOverviewPage .listOverviewPageWrapper .listsScrollContainer {
     height: 60vh;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer {
+  .recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer, .recipeOverviewPage .recipeOverviewPageWrapper .listsScrollContainer, .recipeOverviewPage .listOverviewPageWrapper .recipesScrollContainer, .recipeOverviewPage .listOverviewPageWrapper .listsScrollContainer, .listOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer, .listOverviewPage .recipeOverviewPageWrapper .listsScrollContainer, .listOverviewPage .listOverviewPageWrapper .recipesScrollContainer, .listOverviewPage .listOverviewPageWrapper .listsScrollContainer {
     width: calc(85% * 0.8);
   }
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer .recipesScrollContent {
+.recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer .recipesScrollContent, .recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer .listsScrollContent, .recipeOverviewPage .recipeOverviewPageWrapper .listsScrollContainer .recipesScrollContent, .recipeOverviewPage .recipeOverviewPageWrapper .listsScrollContainer .listsScrollContent, .recipeOverviewPage .listOverviewPageWrapper .recipesScrollContainer .recipesScrollContent, .recipeOverviewPage .listOverviewPageWrapper .recipesScrollContainer .listsScrollContent, .recipeOverviewPage .listOverviewPageWrapper .listsScrollContainer .recipesScrollContent, .recipeOverviewPage .listOverviewPageWrapper .listsScrollContainer .listsScrollContent, .listOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer .recipesScrollContent, .listOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer .listsScrollContent, .listOverviewPage .recipeOverviewPageWrapper .listsScrollContainer .recipesScrollContent, .listOverviewPage .recipeOverviewPageWrapper .listsScrollContainer .listsScrollContent, .listOverviewPage .listOverviewPageWrapper .recipesScrollContainer .recipesScrollContent, .listOverviewPage .listOverviewPageWrapper .recipesScrollContainer .listsScrollContent, .listOverviewPage .listOverviewPageWrapper .listsScrollContainer .recipesScrollContent, .listOverviewPage .listOverviewPageWrapper .listsScrollContainer .listsScrollContent {
   overflow: visible;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1723,12 +1728,12 @@ p {
           justify-content: space-evenly;
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer::-webkit-scrollbar {
+.recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer::-webkit-scrollbar, .recipeOverviewPage .listOverviewPageWrapper .recipesScrollContainer::-webkit-scrollbar, .listOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer::-webkit-scrollbar, .listOverviewPage .listOverviewPageWrapper .recipesScrollContainer::-webkit-scrollbar {
   width: 0px;
   /* For Chrome, Safari, and Opera */
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .quoteContainer {
+.recipeOverviewPage .recipeOverviewPageWrapper .quoteContainer, .recipeOverviewPage .listOverviewPageWrapper .quoteContainer, .listOverviewPage .recipeOverviewPageWrapper .quoteContainer, .listOverviewPage .listOverviewPageWrapper .quoteContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1741,12 +1746,12 @@ p {
   text-align: center;
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .quoteContainer p {
+.recipeOverviewPage .recipeOverviewPageWrapper .quoteContainer p, .recipeOverviewPage .listOverviewPageWrapper .quoteContainer p, .listOverviewPage .recipeOverviewPageWrapper .quoteContainer p, .listOverviewPage .listOverviewPageWrapper .quoteContainer p {
   font-size: 12px;
   opacity: .5;
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .quoteContainer .horizontalLine {
+.recipeOverviewPage .recipeOverviewPageWrapper .quoteContainer .horizontalLine, .recipeOverviewPage .listOverviewPageWrapper .quoteContainer .horizontalLine, .listOverviewPage .recipeOverviewPageWrapper .quoteContainer .horizontalLine, .listOverviewPage .listOverviewPageWrapper .quoteContainer .horizontalLine {
   width: 10%;
   height: 1px;
   background-color: #666666;

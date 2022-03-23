@@ -656,6 +656,10 @@ p {
     }
 }
 
+/* List Overview Page */
+
+
+
 
 
 
@@ -1326,12 +1330,12 @@ $smallRecipeTypeContainerSize: 10px;
 
 /* Recipe Overview Page */
 
-.recipeOverviewPage {
+.recipeOverviewPage, .listOverviewPage {
 
     width: 100%;
     padding-top: calc(#{$navigationHeight} + 20px);
 
-    .recipeOverviewPageWrapper {
+    .recipeOverviewPageWrapper, .listOverviewPageWrapper {
         //width: $wrapperWidth;
         margin: 0 auto;
         //padding-left: calc((100% - #{$wrapperWidth}) / 2);
@@ -1473,6 +1477,15 @@ $smallRecipeTypeContainerSize: 10px;
                 width: calc(#{$wrapperWidth} / 2.5);
             }
 
+            input {
+                border-radius: 20px;
+                border: 0;
+                width: 80%;
+            }
+
+            input:focus {
+                outline: none;
+            }
 
             .search {
                 width: 85%;
@@ -1483,16 +1496,10 @@ $smallRecipeTypeContainerSize: 10px;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
+            }
 
-                input {
-                    border-radius: 20px;
-                    border: 0;
-                    width: 80%;
-                }
-
-                input:focus {
-                    outline: none;
-                }
+            .searchWide {
+                width: 100%;
             }
 
             .filterIconContainer {
@@ -1507,7 +1514,7 @@ $smallRecipeTypeContainerSize: 10px;
             }
         }
 
-        .recipesScrollContainer {
+        .recipesScrollContainer, .listsScrollContainer {
             width: 100%;
             height: 55vh;
             overflow: scroll;
@@ -1537,7 +1544,7 @@ $smallRecipeTypeContainerSize: 10px;
             }
 
 
-            .recipesScrollContent {
+            .recipesScrollContent, .listsScrollContent {
                 overflow: visible;
                 display: flex;
                 flex-wrap: wrap;
