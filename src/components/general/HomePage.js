@@ -46,7 +46,7 @@ const HomePage = () => {
                         <FiEdit2 />
                     </div>
                     <div className="homePageListContainer">
-                        <ListWidgetComponent listName={'TestList'} listItemCount={3} listPictureUrl={'https://www.aok.de/kp/fileadmin/upload/AOK-BW/Curaplan/Bewusst_Leben/Curaplan_aktiv_III_Artikel_Curaplan_Bewusst_Leben_12_richtig_einkaufen_800x500.jpg'} />
+                        <ListWidgetComponent listName={'TestList'} listItemCount={3} listPictureUrl={'https://www.aok.de/kp/fileadmin/upload/AOK-BW/Curaplan/Bewusst_Leben/Curaplan_aktiv_III_Artikel_Curaplan_Bewusst_Leben_12_richtig_einkaufen_800x500.jpg'} large={true} />
                     </div>
 
                 </div>
