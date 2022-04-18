@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import InputComponent from "../InputComponent"
-import InfoComponent from "../InfoComponent";
+import AuthenticationInfoComponent from "../AuthenticationInfoComponent";
 import { FiSend, FiMail, FiXCircle } from "react-icons/fi";
 import SubmitButtonComponent from "../SubmitButtonComponent";
 
@@ -26,7 +26,7 @@ const ForgotPasswordFormComponent = () => {
         <div className="forgotPasswordFormContainer">
 
             {
-                showUserMessage ? <InfoComponent info={userMessage} icon={<FiSend />} icon={<FiXCircle />} onClick={setShowUserMessage} /> : null
+                showUserMessage ? <AuthenticationInfoComponent info={userMessage} icon={<FiSend />} /* icon={<FiXCircle />} */ onClick={setShowUserMessage} /> : null
             }
 
             <div className="allInputsForgotPasswordContainer">

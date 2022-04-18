@@ -641,6 +641,431 @@ p {
   margin-top: 10px;
 }
 
+.listPage {
+  width: 100%;
+  position: relative;
+}
+
+.listPage input {
+  height: 20px;
+  border: none;
+  border-bottom: rgba(102, 102, 102, 0.3) 1px solid;
+}
+
+.listPage input:focus {
+  outline: none;
+}
+
+.listPage input::-webkit-input-placeholder {
+  opacity: .5;
+}
+
+.listPage input:-ms-input-placeholder {
+  opacity: .5;
+}
+
+.listPage input::-ms-input-placeholder {
+  opacity: .5;
+}
+
+.listPage input::placeholder {
+  opacity: .5;
+}
+
+.listPage textarea {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: none;
+  margin-top: 10px;
+  border-bottom: rgba(102, 102, 102, 0.3) 1px solid;
+}
+
+.listPage textarea:focus {
+  outline: none;
+}
+
+.listPage .listPictureContainer {
+  width: 100%;
+  height: 30vh;
+  position: fixed;
+  padding-top: 80px;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listPictureContainer {
+    position: relative;
+    padding: 0;
+  }
+}
+
+.listPage .listContentContainer {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  min-height: calc(100vh - (80px + (30vh * 0.8)));
+  border-radius: 30px;
+  position: absolute;
+  background-color: #fff;
+  margin-top: calc(80px + (30vh * 0.8));
+  z-index: 2;
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer {
+    position: relative;
+    margin: 0;
+    border-radius: 0;
+    background-color: #F7F9FC;
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper {
+  width: 85%;
+  margin: 25px auto;
+  /* Generell Css */
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper {
+    margin: 0 auto;
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper .listSubheading {
+  font-weight: 600;
+}
+
+.listPage .listContentContainer .listContentWrapper .listNormalText {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper .listHeader {
+    position: absolute;
+    top: calc(( 9vh / -2 ) - 5px);
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listNameContainer {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 481px) {
+  .listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listNameContainer {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listNameContainer {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listNameContainer {
+    background-color: #fff;
+    width: 33vw;
+    height: 9vh;
+    padding-left: 7.5vw;
+    padding-top: 10px;
+    border-top-right-radius: 9vh;
+    border-bottom-right-radius: 9vh;
+    -webkit-box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+            box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listNameContainer .listNameEditView {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listNameContainer .listNameEditView .editListNameNormalView {
+    display: none;
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listNameContainer .listNameEditView .editListNameDesktopView {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listNameContainer .listNameEditView .editListNameDesktopView {
+    display: block;
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listNameContainer .listNameEditView .editListNameDesktopView .editListNameFlexContainer {
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listNameContainer .listNameEditView .editListNameDesktopView .editListNameFlexContainer p {
+  width: 40%;
+}
+
+.listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listNameContainer .listNameEditView .editListNameDesktopView .editListNameFlexContainer input {
+  width: 45%;
+}
+
+.listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listNameContainer .listName {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 481px) {
+  .listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listNameContainer .listName {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listNameContainer .listSettingsDescription {
+    font-size: 17px;
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listButtons {
+    position: absolute;
+    right: -59vw;
+    top: calc( -1 * (30vh - 80px) * 0.65);
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listButtons .listPageIcon {
+  font-size: 25px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listButtons .listPageIcon {
+    font-size: 22px;
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listButtons .changeListButton, .listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listButtons .exitListPageButton {
+  margin-left: 15px;
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listButtons .changeListButton, .listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .listButtons .exitListPageButton {
+    width: 5.5vh;
+    max-width: 50px;
+    height: 5.5vh;
+    max-height: 50px;
+    border-radius: calc(5.5vh / 2);
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+            box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+    margin: 0 10px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper .listHeader .listHeaderFlexContainer .exitEditViewButton {
+    right: -59vw;
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper .listInfoSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 30px 0;
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper .listInfoSection {
+    margin: 0 auto;
+    width: 20%;
+    position: absolute;
+    right: 5vw;
+    top: calc(9vh / -2);
+    z-index: 2;
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper .changeListInfoSection {
+  width: 100%;
+}
+
+.listPage .listContentContainer .listContentWrapper .changeListInfoSection .editSmallScreenView {
+  width: 100%;
+}
+
+@media screen and (min-width: 481px) {
+  .listPage .listContentContainer .listContentWrapper .changeListInfoSection .editSmallScreenView {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper .changeListInfoSection .editSmallScreenView {
+    display: none;
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper .changeListInfoSection .editSmallScreenView .changeListInfoInputContainer {
+  width: 100%;
+  margin: 40px 0;
+}
+
+@media screen and (min-width: 481px) {
+  .listPage .listContentContainer .listContentWrapper .changeListInfoSection .editSmallScreenView .changeListInfoInputContainer {
+    width: 45%;
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper .changeListInfoSection .editSmallScreenView .changeListInfoInputContainer input {
+  margin-top: 10px;
+  width: 60%;
+}
+
+@media screen and (min-width: 481px) {
+  .listPage .listContentContainer .listContentWrapper .changeListInfoSection .editSmallScreenView .changeListInfoInputContainer input {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper .listMainSection {
+    width: 100%;
+    padding-top: 4.5vh;
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper .listMainSection .listAboutSection {
+  margin: 30px 0;
+  text-align: justify;
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper .listMainSection .listAboutSection {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: 55vh;
+    background-color: #fff;
+    padding: 1.8%;
+    -webkit-box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+            box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+    border-radius: 25px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper .listMainSection .listAboutSection .listNormalText {
+    max-height: 50vh;
+    overflow: scroll;
+    scrollbar-width: none;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper .listMainSection .listAboutSection .listNormalText::-webkit-scrollbar {
+  width: 0px;
+  /* For Chrome, Safari, and Opera */
+}
+
+.listPage .listContentContainer .listContentWrapper .listMainSection .listItemsSection {
+  margin: 30px 0;
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper .listMainSection .listItemsSection {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: 55vh;
+    background-color: #fff;
+    padding: 1.8%;
+    -webkit-box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+            box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+    border-radius: 25px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .listPage .listContentContainer .listContentWrapper .listMainSection .listItemsSection .listItemsContainer {
+    max-height: calc(50vh - 35px);
+    overflow: scroll;
+    scrollbar-width: none;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
+  }
+}
+
+.listPage .listContentContainer .listContentWrapper .listMainSection .listItemsSection .listItemsContainer::-webkit-scrollbar {
+  width: 0px;
+  /* For Chrome, Safari, and Opera */
+}
+
 /* List Widget */
 .largListWidgetContainer {
   width: 100%;
@@ -774,6 +1199,68 @@ p {
 }
 
 /* List Overview Page */
+/* List Item Component */
+.listItemComponent {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Generell CSS */
+}
+
+.listItemComponent input {
+  width: 100%;
+}
+
+.listItemComponent .listItemParagraph {
+  font-size: 14px;
+}
+
+.listItemComponent .itemNameContainer {
+  width: 40%;
+  text-align: left;
+}
+
+.listItemComponent .listItemAmountContainer {
+  width: 20%;
+  text-align: center;
+}
+
+.listItemComponent .listItemButtons {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.listItemComponent .listItemButton {
+  width: 23px;
+  height: 23px;
+  -webkit-box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+          box-shadow: 0 0.2em 1em rgba(102, 102, 102, 0.5);
+  border-radius: calc(23px / 2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /* Recipe Page */
 .recipePage {
   width: 100%;

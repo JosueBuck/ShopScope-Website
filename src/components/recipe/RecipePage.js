@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FiXCircle, FiSliders, FiPlus } from "react-icons/fi";
-import RecipeInfoComponent from './RecipeInfoComponent';
+import RecipeInfoComponent from '../general/InfoComponent';
 import RecipeIngredientComponent from './RecipeIngredientComponent';
 import RecipeTypeContainerComponent from './RecipeTypeContainerComponent';
 

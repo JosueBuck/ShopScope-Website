@@ -1,11 +1,20 @@
 import React from 'react';
 
-const RecipeInfoComponent = ({nameOfInfo, valueOfInfo}) => {
+const RecipeInfoComponent = ({nameOfInfo, valueOfInfo, icon, showIcon}) => {
 
     return (
         <div className="recipeInfoComponent">
             <div className="recipeInfoValueContainer">
-                <p className="recipeInfoValue">{valueOfInfo}</p>
+                {
+                    showIcon ?
+
+                    icon
+
+                    :
+
+                    <p className="recipeInfoValue">{valueOfInfo}</p>
+                }
+               
             </div>
             <p className="recipeInfoName">{nameOfInfo}</p>
         </div>

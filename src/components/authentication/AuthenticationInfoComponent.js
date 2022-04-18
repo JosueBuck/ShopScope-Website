@@ -1,6 +1,6 @@
 import React from "react";
 
-const InfoComponent = ({info, icon, onClick}) => {
+const AuthenticationInfoComponent = ({info, icon, onClick}) => {
 
     return (
         <div className="infoContainer">
@@ -20,4 +20,4 @@ const InfoComponent = ({info, icon, onClick}) => {
     )
 }
 
-export default InfoComponent
+export default AuthenticationInfoComponent

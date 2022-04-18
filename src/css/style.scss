@@ -613,6 +613,393 @@ $sizeTablet: 175px;
 $sizeDesktop: 19vw;
 ////////* LISTS *////////
 
+$recipePictureHeight: 30vh;
+$sectionMargin: 30px 0;
+$recipeNameContainerHeight: 9vh;
+.listPage { 
+    
+    width: 100%;
+    //min-height: fit-content;
+    position: relative;
+
+    input {
+
+        height: 20px;
+        border: none;
+        border-bottom: rgba($color: #666666, $alpha: .3) 1px solid;
+
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            opacity: .5;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        height: fit-content;
+        border: none;
+        margin-top: 10px;
+        border-bottom: rgba($color: #666666, $alpha: .3) 1px solid;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .listPictureContainer {
+        width: 100%;
+        height: $recipePictureHeight;
+        position: fixed;
+        padding-top: $navigationHeight;
+        z-index: 1;
+
+        @include desktop() {
+            position: relative;
+            padding: 0;
+        }
+    }
+
+    .listContentContainer {
+        width: 100%;
+        height: max-content;
+        min-height: calc(100vh - (#{$navigationHeight} + (#{$recipePictureHeight} * 0.8)));
+        border-radius: 30px;
+        position: absolute;
+        background-color: #fff;
+        margin-top: calc(#{$navigationHeight} + (#{$recipePictureHeight} * 0.8));
+        z-index: 2;
+
+        @include desktop() {
+            position: relative;
+            margin: 0;   
+            border-radius: 0;
+            background-color: #F7F9FC;
+        }
+
+        .listContentWrapper {
+            width: 85%;
+            margin: 25px auto;
+
+            @include desktop() {
+                margin: 0 auto;   
+            }
+
+            /* Generell Css */
+
+            .listSubheading {
+                font-weight: 600;
+            }
+            
+            .listNormalText {
+                font-size: 14px;
+            }
+
+            .listHeader {
+
+                @include desktop() {
+                    position: absolute;  
+                    //top: -48.5px;
+                    top: calc(( #{$recipeNameContainerHeight} / -2 ) - 5px); //hidden scrollbar in type container has a total height of 10 px -> take half to center it!
+                    left: 0;
+                    display: flex;
+                }
+
+                .listHeaderFlexContainer {
+
+                    display: flex;
+                    justify-content: space-between;
+
+                    .listNameContainer {
+
+                        width: 70%;
+                        display: flex;
+                        overflow: hidden;
+                        align-items: center;
+                        
+                        @include tablet() {
+                            width: 80%;
+                        }
+
+                        @include tablet-portait() {
+                            width: 85%;
+                        }
+
+                        @include desktop() {
+                            background-color: #fff;
+                            width: 33vw;
+                            height: $recipeNameContainerHeight;
+                            padding-left: 7.5vw;
+                            padding-top: 10px;
+                            //padding-bottom: 10px;
+                            border-top-right-radius: $recipeNameContainerHeight;
+                            border-bottom-right-radius: $recipeNameContainerHeight;
+                            box-shadow: $boxShadow;
+                        }
+
+                        .listNameEditView {
+
+                            width: 100%;
+                            height: 100%;
+                            margin-bottom: 10px;
+
+                            .editListNameNormalView {
+
+                                @include desktop() {
+                                    display: none;
+                                }
+                            }
+    
+                            .editListNameDesktopView {
+                                
+                                width: 100%;
+                                height: 100%;
+                                display: none;
+    
+                                @include desktop() {
+                                    display: block;
+                                }
+    
+                                .editListNameFlexContainer {
+                                    height: 50%;
+                                    display: flex;
+                                    align-items: center;
+    
+                                    p {
+                                        width: 40%;
+                                    }
+
+                                    input {
+                                        width: 45%;
+                                    }
+                                }
+                            }
+                        }
+
+                        
+    
+                        .listName {
+                            font-size: 18px;
+                            font-weight: 600;
+
+                            @include tablet() {
+                                font-size: 20px;
+                                font-weight: 600;
+                            }
+                        }
+
+                        .listSettingsDescription {
+
+                            @include tablet() {
+                                font-size: 17px;
+                            }
+                        }
+    
+                    }
+                    
+                    .listButtons {
+
+                        display: flex;
+                        
+                        @include desktop() {
+                            //display: block;
+                            position: absolute;
+                            right: -59vw;
+                            top: calc( -1 * (#{$recipePictureHeight} - #{$navigationHeight}) * 0.65 )
+                        }
+
+                        .listPageIcon {
+                            font-size: 25px;
+                            transform: rotate(90deg);
+
+                            @include desktop() {
+                                font-size: 22px;
+                            }
+                        }
+    
+                        $recipeBageButtonSize: 5.5vh;
+                        .changeListButton, .exitListPageButton{
+
+                            margin-left: 15px;
+
+                            @include desktop() {
+                                width: $recipeBageButtonSize;
+                                max-width: 50px;
+                                height: $recipeBageButtonSize;
+                                max-height: 50px;
+                                border-radius: calc(#{$recipeBageButtonSize} / 2);
+                                background-color: #fff;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                box-shadow: $boxShadow;
+                                margin: 0 10px;
+                            }
+                        }
+                    }
+
+                    .exitEditViewButton {
+                        @include desktop() {
+                            //display: block;
+                            right: -59vw;
+                        }
+                    }
+                }
+
+            }
+
+            .listInfoSection {
+                display: flex;
+                justify-content: space-around;
+                margin: $sectionMargin;
+
+                @include desktop() {
+                    margin: 0 auto; 
+                    width: 20%;
+                    position: absolute;
+                    right: 5vw;
+                    top: calc(#{$recipeNameContainerHeight} / -2);
+                    z-index: 2;  
+                }
+            }
+
+            $sectionsPadding: 4.5vh;
+            .changeListInfoSection {
+
+                width: 100%;
+
+                
+
+                .editSmallScreenView {
+
+                    @include tablet() {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        //padding-top: $sectionsPadding;
+                    } 
+    
+                    @include desktop() {
+                        display: none;
+                    }
+                    width: 100%;
+
+                    .changeListInfoInputContainer {
+                        width: 100%;
+                        margin: 40px 0;
+    
+                        @include tablet() {
+                            width: 45%;
+                        }                    
+    
+                        input {
+                            margin-top: 10px;
+                            width: 60%;
+    
+                            @include tablet() {
+                                width: 90%;
+                            } 
+                        }
+    
+                    }
+                }
+
+                
+                
+            }
+
+            .listMainSection {
+                $sectionWidth: 28%;
+                $sectionMaxHeight: 55vh;
+                $sectionParagraphMaxHeight: 50vh;
+                $sectionInnerPadding: 1.8%;
+                $borderRadius: 25px;
+                $addRecipeButtonHeight: 35px;
+
+                @include desktop() {
+                    width: 100%;
+                    //display: flex;
+                    //justify-content: space-between;
+                    padding-top: $sectionsPadding;
+                }
+
+                .listAboutSection {
+
+                    margin: $sectionMargin;
+                    text-align: justify;
+
+                    @include desktop() {
+                        width: 100%;
+                        height: fit-content;
+                        max-height: $sectionMaxHeight;
+                        background-color: #fff;
+                        padding: $sectionInnerPadding;
+                        box-shadow: $boxShadow;
+                        border-radius: $borderRadius;
+                        
+                    }
+
+                    .listNormalText {
+
+                        @include desktop() {
+                            max-height: $sectionParagraphMaxHeight;
+                            overflow: scroll;
+
+                            scrollbar-width: none; /* For Firefox */
+                            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+                        }
+                        
+                    }
+
+                    .listNormalText::-webkit-scrollbar {
+                        width: 0px; /* For Chrome, Safari, and Opera */
+                    }
+                }
+
+                
+    
+                .listItemsSection {
+    
+                    margin: $sectionMargin;
+
+                    @include desktop() {
+                        width: 100%;
+                        height: fit-content;
+                        max-height: $sectionMaxHeight;
+                        background-color: #fff;
+                        padding: $sectionInnerPadding;
+                        box-shadow: $boxShadow;
+                        border-radius: $borderRadius;
+                    }
+
+                    .listItemsContainer {
+
+                        @include desktop() {
+                            max-height: calc(#{$sectionParagraphMaxHeight} - #{$addRecipeButtonHeight});
+                            overflow: scroll;
+
+                            scrollbar-width: none; /* For Firefox */
+                            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+                        }
+                        
+                    }
+
+                    .listItemsContainer::-webkit-scrollbar {
+                        width: 0px; /* For Chrome, Safari, and Opera */
+                    }
+                }
+                
+            }
+
+            
+        }
+    }
+}
+
+
 /* List Widget */
 
 .largListWidgetContainer {
@@ -721,6 +1108,63 @@ $sizeDesktop: 19vw;
 /* List Overview Page */
 
 //see recipe overview page!!!
+
+
+/* List Item Component */
+$addButtonSize:23px;
+.listItemComponent {
+
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+
+    
+    input {
+        width: 100%;
+    }
+
+    /* Generell CSS */
+
+    .listItemParagraph {
+        font-size: 14px;
+    }
+
+    .itemNameContainer {
+
+        width: 40%; 
+        text-align: left;
+        
+    }
+
+    .listItemAmountContainer {
+
+        width: 20%;
+        text-align: center;
+    }
+
+    .listItemButtons {
+
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .listItemButton {
+
+        width: $addButtonSize;
+        height: $addButtonSize;
+        box-shadow: $boxShadow;
+        border-radius: calc(#{$addButtonSize} / 2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+}
 
 
 

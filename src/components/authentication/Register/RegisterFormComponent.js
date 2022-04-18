@@ -1,7 +1,7 @@
 import { useState } from "react";
 import InputComponent from "../InputComponent";
 import SubmitButtonComponent from "../SubmitButtonComponent";
-import InfoComponent from "../InfoComponent";
+import AuthenticationInfoComponent from "../AuthenticationInfoComponent";
 import { FiUser, FiKey, FiMail, FiToggleLeft, FiToggleRight, FiSend, FiXCircle } from "react-icons/fi";
 
 const RegisterFormComponent = () => {
@@ -60,7 +60,7 @@ const RegisterFormComponent = () => {
         <div className="registerFormContainer">
 
             {
-                showUserMesssage ? <InfoComponent info={userMessage} icon={<FiXCircle />} onClick={setShowUserMessage} /> : null
+                showUserMesssage ? <AuthenticationInfoComponent info={userMessage} icon={<FiXCircle />} onClick={setShowUserMessage} /> : null
             }
             <div className="allInputsRegisterContainer">
                 <InputComponent onChange={setFirstName} value={firstName} placeholder={'First Name'} icon={<FiToggleLeft className="icon" />} />
