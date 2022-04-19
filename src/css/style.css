@@ -394,8 +394,12 @@ p {
   text-transform: uppercase;
 }
 
-.navigationContainer .mobileNavigationContent .invisibleMobileNavigationContent .navigationLinkContainer .currentPage {
-  font-weight: 400;
+.navigationContainer .mobileNavigationContent .invisibleMobileNavigationContent .navigationLinkContainer p .currentPage {
+  font-weight: 500;
+}
+
+.navigationContainer .mobileNavigationContent .invisibleMobileNavigationContent .navigationLinkContainer p .notActive {
+  font-weight: 100;
 }
 
 .navigationContainer .mobileNavigationContent .invisibleMobileNavigationContent .navigationLinkContainer .accountIcon {

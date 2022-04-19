@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { RiAccountCircleFill } from "react-icons/ri";
+import { NavLink} from "react-router-dom";
 
 const NavigationComponent = () => {
 
@@ -26,15 +27,38 @@ const NavigationComponent = () => {
                 <div style={
                     showNavigationLinks ? { top: 0 } : { top: -200 }
                 } className="invisibleMobileNavigationContent">
-                    <div className="navigationLinkContainer">
-                        <p className="currentPage">Home</p>
-                    </div>
-                    <div className="navigationLinkContainer">
-                        <p>Receipts</p>
-                    </div>
-                    <div className="navigationLinkContainer">
-                        <p>Lists</p>
-                    </div>
+                        
+                        <div className="navigationLinkContainer">
+                            <p>
+                        <NavLink onClick={() => { setShowNavigationLinks(!showNavigationLinks) }} className={(navData) => navData.isActive ? "currentPage" : "notActive"} to="/">
+                            Home
+                            </NavLink>
+                            </p>
+                            </div>
+                        
+                    
+                    
+                        
+                        <div className="navigationLinkContainer">
+                        <p>
+                        <NavLink  onClick={() => { setShowNavigationLinks(!showNavigationLinks) }} className={(navData) => navData.isActive ? "currentPage" : "notActive"} to="/Receipts">
+                            Receipts
+                            </NavLink>
+                            </p>
+                            </div>
+                        
+                    
+                    
+                        
+                        <div className="navigationLinkContainer">
+                        <p>
+                        <NavLink onClick={() => { setShowNavigationLinks(!showNavigationLinks) }} className={(navData) => navData.isActive ? "currentPage" : "notActive"} to="/Lists">
+                            Lists
+                            </NavLink>
+                            </p>
+                            </div>
+                        
+                    
                     <div className="navigationLinkContainer">
                         <RiAccountCircleFill className="accountIcon" />
                     </div>
