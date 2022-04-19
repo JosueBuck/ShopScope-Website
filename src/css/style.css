@@ -454,6 +454,14 @@ p {
           align-items: center;
 }
 
+.navigationContainer .navigationContent .contentWrapper .navigationLinks .currentPage {
+  font-weight: 600;
+}
+
+.navigationContainer .navigationContent .contentWrapper .navigationLinks .notActive {
+  font-weight: 300;
+}
+
 .navigationContainer .navigationContent .contentWrapper .navigationLinks p {
   font-size: 18px;
 }
@@ -2296,7 +2304,7 @@ p {
           justify-content: space-evenly;
 }
 
-.recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer::-webkit-scrollbar, .recipeOverviewPage .listOverviewPageWrapper .recipesScrollContainer::-webkit-scrollbar, .listOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer::-webkit-scrollbar, .listOverviewPage .listOverviewPageWrapper .recipesScrollContainer::-webkit-scrollbar {
+.recipeOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer::-webkit-scrollbar, .recipeOverviewPage .recipeOverviewPageWrapper .listsScrollContainer::-webkit-scrollbar, .recipeOverviewPage .listOverviewPageWrapper .recipesScrollContainer::-webkit-scrollbar, .recipeOverviewPage .listOverviewPageWrapper .listsScrollContainer::-webkit-scrollbar, .listOverviewPage .recipeOverviewPageWrapper .recipesScrollContainer::-webkit-scrollbar, .listOverviewPage .recipeOverviewPageWrapper .listsScrollContainer::-webkit-scrollbar, .listOverviewPage .listOverviewPageWrapper .recipesScrollContainer::-webkit-scrollbar, .listOverviewPage .listOverviewPageWrapper .listsScrollContainer::-webkit-scrollbar {
   width: 0px;
   /* For Chrome, Safari, and Opera */
 }

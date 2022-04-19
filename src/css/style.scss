@@ -428,8 +428,19 @@ p {
                 justify-content: space-between;
                 align-items: center;
 
+                .currentPage {
+                    font-weight: 600;
+                }
+
+                .notActive {
+                    font-weight: 300;
+                }
+
                 p {
                     font-size: 18px;
+
+                    
+                    
                 }
 
                 .accountIcon {
@@ -2065,7 +2076,7 @@ $smallRecipeTypeContainerSize: 10px;
             }
         }
 
-        .recipesScrollContainer::-webkit-scrollbar {
+        .recipesScrollContainer::-webkit-scrollbar, .listsScrollContainer::-webkit-scrollbar {
             width: 0px; /* For Chrome, Safari, and Opera */
         }
 
