@@ -11,19 +11,21 @@ import ListOverviewPage from "./components/list/ListOverviewPage";
 import ListPage from "./components/list/ListPage";
 
 import * as React from "react";
-import { BrowserRouter as Router, Route , Routes} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import RouterLayout from "./components/general/RoutingLayoutComponent";
 
 function App() {
-
   return (
     <div className="App">
-      
       <Router>
-      <NavigationComponent />
         <Routes>
-          <Route path="/" element={<HomePage/>} />
-          <Route path="/Receipts" element={<RecipeOverviewPage/>} />
-          <Route path="/Lists" element={<ListOverviewPage/>} />
+          <Route path="/Login" element={<LoginPage />} />
+          <Route path="/Register" element={<RegisterPage />} />
+          <Route path="/" element={<RouterLayout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/Receipts" element={<RecipeOverviewPage />} />
+            <Route path="/Lists" element={<ListOverviewPage />} />
+          </Route>
         </Routes>
       </Router>
     </div>
