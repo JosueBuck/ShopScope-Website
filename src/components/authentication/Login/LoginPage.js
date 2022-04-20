@@ -1,6 +1,8 @@
 import logo from '../../../assets/shopscopeLogo.png';
 import LoginFormComponent from './LoginFormComponent';
 
+import { Link } from 'react-router-dom';
+
 const LoginPage = () => {
     return (
         <div className='loginPage'>
@@ -12,7 +14,7 @@ const LoginPage = () => {
                 <LoginFormComponent />
                 <div className='infoText'>
                     <p>
-                        New here ? - then <a href="#">register</a>!
+                        New here ? - then <Link to="/Register">Register</Link>!
                     </p>
                 </div>
             </div>
