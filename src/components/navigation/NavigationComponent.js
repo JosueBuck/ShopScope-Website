@@ -45,7 +45,7 @@ const NavigationComponent = () => {
                 className={(navData) =>
                   navData.isActive ? "currentPage" : "notActive"
                 }
-                to="/"
+                to="/Home"
               >
                 Home
               </NavLink>
@@ -95,7 +95,7 @@ const NavigationComponent = () => {
           <p>ShopScope</p>
           <div className="navigationLinks">
             <NavLink
-              to="/"
+              to="/Home"
               className={(navData) =>
                 navData.isActive ? "currentPage" : "notActive"
               }
