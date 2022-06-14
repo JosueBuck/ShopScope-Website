@@ -13,6 +13,7 @@ import ListPage from "./components/list/ListPage";
 import * as React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import RouterLayout from "./components/general/RoutingLayoutComponent";
+import RequireAuth from "./routing/RequireAuth";
 
 function App() {
   return (
@@ -21,10 +22,12 @@ function App() {
         <Routes>
           <Route path="/Login" element={<LoginPage />} />
           <Route path="/Register" element={<RegisterPage />} />
-          <Route path="/" element={<RouterLayout />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/Receipts" element={<RecipeOverviewPage />} />
-            <Route path="/Lists" element={<ListOverviewPage />} />
+          <Route element={<RequireAuth />}>
+            <Route path="/" element={<RouterLayout />}>
+              <Route path="/Home" element={<HomePage />} />
+              <Route path="/Receipts" element={<RecipeOverviewPage />} />
+              <Route path="/Lists" element={<ListOverviewPage />} />
+            </Route>
           </Route>
         </Routes>
       </Router>
