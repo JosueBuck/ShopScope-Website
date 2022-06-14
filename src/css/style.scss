@@ -1066,7 +1066,7 @@ $recipeNameContainerHeight: 9vh;
 
     width: calc(#{$size} - (#{$size} * 0.3));
     height: $size;
-    margin: 10px 0;
+    margin: 10px 10px 20px 10px;
     border-radius: 20px;
     background-color: #fff;
     box-shadow: 0 .2em 1em rgba($color: #666666, $alpha: .5);
